@@ -107,15 +107,42 @@ function openmenuvehicle()
                 OpenCoffreInventoryMenu(GetVehicleNumberPlateText(vehFront), Config.VehicleLimit[class], myVeh)
               end
             else
-              exports['mythic_notify']:SendAlert('error', _U("trunk_closed"))
+              exports.pNotify:SendNotification(
+                {
+                  text = _U("trunk_closed"),
+                  type = "error",
+                  timeout = 3000,
+                  layout = "bottomCenter",
+                  queue = "inventoryhud"
+                }
+              )
+              -- exports['mythic_notify']:SendAlert('error', _U("trunk_closed"))
             end
           end
         else
+          exports.pNotify:SendNotification(
+            {
+              text = _U("no_veh_nearby"),
+              type = "error",
+              timeout = 3000,
+              layout = "bottomCenter",
+              queue = "inventoryhud"
+            }
+          )
           exports['mythic_notify']:SendAlert('error', _U("no_veh_nearby"))
         end
         lastOpen = true
       end
     else
+      exports.pNotify:SendNotification(
+        {
+          text = _U("nacho_veh"),
+          type = "error",
+          timeout = 3000,
+          layout = "bottomCenter",
+          queue = "inventoryhud"
+        }
+      )
       exports['mythic_notify']:SendAlert('error', _U("nacho_veh"))
     end
   end

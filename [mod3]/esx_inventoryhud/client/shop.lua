@@ -43,7 +43,16 @@ Citizen.CreateThread(function()
                         TriggerScreenblurFadeIn(0)
                         Citizen.Wait(2000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You need a Fire Arms license before you can buy weapons')
+                        -- exports['mythic_notify']:SendAlert('error', 'You need a Fire Arms license before you can buy weapons')
+                        exports.pNotify:SendNotification(
+                            {
+                                text = 'You need a Fire Arms license before you can buy weapons',
+                                type = "error",
+                                timeout = 3000,
+                                layout = "bottomCenter",
+                                queue = "inventoryhud"
+                            }
+                        )
                     end
                 end
             end
@@ -190,7 +199,16 @@ Citizen.CreateThread(function()
                 if Licenses['weapon'] == nil then
                     OpenBuyLicenseMenu()
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You already have a Fire arms license!')
+                    -- exports['mythic_notify']:SendAlert('error', 'You already have a Fire arms license!')
+                    exports.pNotify:SendNotification(
+                        {
+                            text = 'You already have a Fire arms license!',
+                            type = "error",
+                            timeout = 3000,
+                            layout = "bottomCenter",
+                            queue = "inventoryhud"
+                        }
+                    )
                 end
                 Citizen.Wait(2000)
             end

@@ -117,7 +117,7 @@ Citizen.CreateThread(function()
 			DisableControlAction(0, 45, true) -- Reload
 			DisableControlAction(0, 22, true) -- Jump
 			DisableControlAction(0, 44, true) -- Cover
-			DisableControlAction(0, 37, true) -- Select Weapon
+			-- DisableControlAction(0, 37, true) -- Select Weapon -- disableTAB
 			DisableControlAction(0, 23, true) -- Also 'enter'?
 			DisableControlAction(0, 24, true) -- Attack
 			DisableControlAction(0, 257, true) -- Attack 2

@@ -81,16 +81,16 @@ RegisterNUICallback("GetNearPlayers", function(data, cb)
     end
 
 	if not foundPlayers then
-		--[[exports.pNotify:SendNotification(
-                {
-                    text = _U("players_nearby"),
-                    type = "error",
-                    timeout = 3000,
-                    layout = "bottomCenter",
-                    queue = "inventoryhud"
-                }
-            )--]] --Uncomment This to Use pNotify
-            exports['mythic_notify']:SendAlert('error', _U("players_nearby"))
+		exports.pNotify:SendNotification(
+            {
+                text = _U("players_nearby"),
+                type = "error",
+                timeout = 3000,
+                layout = "bottomCenter",
+                queue = "inventoryhud"
+            }
+        ) --Uncomment This to Use pNotify
+            -- exports['mythic_notify']:SendAlert('error', _U("players_nearby"))
         else
             SendNUIMessage(
                 {
@@ -195,8 +195,8 @@ RegisterNUICallback("GiveItem", function(data, cb)
         Wait(250)
         loadPlayerInventory()
     else
-        exports['mythic_notify']:SendAlert('error', _U("player_nearby"))
-        --[[exports.pNotify:SendNotification(
+        -- exports['mythic_notify']:SendAlert('error', _U("player_nearby"))
+        exports.pNotify:SendNotification(
             {
                 text = _U("player_nearby"),
                 type = "error",
@@ -204,7 +204,7 @@ RegisterNUICallback("GiveItem", function(data, cb)
                 layout = "bottomCenter",
                 queue = "inventoryhud"
             }
-        )--]] -- Uncomment This to Use pNotify
+        ) -- Uncomment This to Use pNotify
 	end
     cb("ok")
 end)
@@ -375,13 +375,13 @@ function loadPlayerInventory()
 			local texts =  _U("player_info", GetPlayerName(PlayerId()), (weight / 1000), (Config.Limit / 1000))
 			
             if weight > Config.Limit then
-                exports['mythic_notify']:SendAlert('error', 'Inventário Cheio! Não Consegues Andar')
-				--[[TriggerEvent("pNotify:SendNotification",  {
+                -- exports['mythic_notify']:SendAlert('error', 'Inventário Cheio! Não Consegues Andar')
+				TriggerEvent("pNotify:SendNotification",  {
 					text =  'Inventário Cheio! Não Consegues Andar',
 					type = "error",
 					timeout = 2000,
 					layout = "centerLeft"
-                })--]] --Uncomment this to Use pNotify
+                }) --Uncomment this to Use pNotify
 			   setHurt()
 			   
 			   texts = _U("player_info_full", GetPlayerName(PlayerId()), (weight / 1000), (Config.Limit / 1000))
@@ -516,7 +516,7 @@ Citizen.CreateThread(
                 DisableControlAction(0, 45, true) -- Reload
                 DisableControlAction(0, 22, true) -- Jump
                 DisableControlAction(0, 44, true) -- Cover
-                DisableControlAction(0, 37, true) -- Select Weapon
+                -- DisableControlAction(0, 37, true) -- Select Weapon --disable TAB button
                 DisableControlAction(0, 23, true) -- Also 'enter'?
 
                 DisableControlAction(0, 288, true) -- Disable phone
@@ -549,16 +549,16 @@ Citizen.CreateThread(
 end)
 
 -- HIDE WEAPON WHEEL
-Citizen.CreateThread(function ()
-	Citizen.Wait(2000)
-	while true do
-		Citizen.Wait(0)
-		HideHudComponentThisFrame(19)
-		HideHudComponentThisFrame(20)
-		BlockWeaponWheelThisFrame()
-		DisableControlAction(0, 37,true)
-	end
-end)
+-- Citizen.CreateThread(function ()
+-- 	Citizen.Wait(2000)
+-- 	while true do
+-- 		Citizen.Wait(0)
+-- 		HideHudComponentThisFrame(19)
+-- 		HideHudComponentThisFrame(20)
+-- 		BlockWeaponWheelThisFrame()--disable TAB button
+-- 		DisableControlAction(0, 37,true)--disable TAB button
+-- 	end
+-- end)
 
 --FAST ITEMS
 RegisterNUICallback("PutIntoFast", function(data, cb)

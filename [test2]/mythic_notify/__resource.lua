@@ -24,4 +24,5 @@ exports {
 	'DoHudText',
 	'DoLongHudText',
 	'DoCustomHudText',
+	'SendAlert',
 }

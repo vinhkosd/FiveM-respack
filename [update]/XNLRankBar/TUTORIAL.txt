@@ -1,0 +1,50 @@
+exports.XNLRankBar:Exp_XNL_GetCurrentPlayerXP()    -- Will return the current (total) XP amount of the player (int)
+exports.XNLRankBar:Exp_XNL_GetCurrentPlayerLevel() -- Returns the current Level (int) (calculated from the XP amount automatically)
+exports.XNLRankBar:Exp_XNL_GetLevelFromXP(intXPAmount) -- Will 'Calculate' the intXPAmount given into the level it 'belongs to'
+
+RegisterNetEvent("XNL_NET:XNL_SetInitialXPLevels")
+AddEventHandler("XNL_NET:XNL_SetInitialXPLevels", function(NetCurrentXP, NetShowRankBar, NetShowRankBarAnimating)
+	XNL_SetInitialXPLevels(NetCurrentXP, NetShowRankBar, NetShowRankBarAnimating)
+end)
+
+RegisterNetEvent("XNL_NET:AddPlayerXP")
+AddEventHandler("XNL_NET:AddPlayerXP", function(NetXPAmmount)
+	XNL_AddPlayerXP(NetXPAmmount)
+end)
+
+RegisterNetEvent("XNL_NET:RemovePlayerXP")
+AddEventHandler("XNL_NET:RemovePlayerXP", function(NetXPAmmount)
+	XNL_RemovePlayerXP(NetXPAmmount)
+end)
+
+RegisterServerEvent('AddXp')
+AddEventHandler('AddXp',function(value)
+	
+	local _source = source
+	local xPlayer  = ESX.GetPlayerFromId(_source)
+	MySQL.Async.fetchAll('SELECT `exp` FROM users WHERE identifier = @identifier', {
+		['@identifier'] = xPlayer.identifier
+	}, function(result)
+        -- print(result[1].rank)
+       local xpbd = result[1].exp
+   	
+	MySQL.Async.fetchAll("UPDATE users SET exp = @xp WHERE identifier = @identifier",
+                {
+                 ['@identifier'] = xPlayer.identifier,
+				 ['@xp'] = xpbd + (value)
+                }
+                )
+	 end)
+end)
+
+
+RegisterServerEvent('RemoveXp')
+AddEventHandler('RemoveXp',function(value)
+	
+	local _source = source
+	local xPlayer  = ESX.GetPlayerFromId(_source)
+	MySQL.Async.fetchAll('SELECT `exp` FROM users WHERE identifier = @identifier', {
+		['@identifier'] = xPlayer.identifier
+	}, function(result)
+   	 end)
+end)

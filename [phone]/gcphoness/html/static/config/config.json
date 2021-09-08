@@ -1,0 +1,458 @@
+{
+  "reseau": "SPorn",
+  "warningMessageCount": 250,
+  "themeColor": "#303f9f",
+  "colors": [
+    "#EF5350",
+    "#EC407A",
+    "#AB47BC",
+    "#7E57C2",
+    "#5C6BC0",
+    "#42A5F5",
+    "#29B6F6",
+    "#26C6DA",
+    "#26A69A",
+    "#66BB6A",
+    "#9CCC65",
+    "#D4E157",
+    "#FFCA28",
+    "#FFA726",
+    "#FF7043",
+    "#8D6E63",
+    "#78909C"
+  ],
+
+  "useFormatNumberFrance": true,
+
+  "useWebRTCVocal": false,
+  "RTCConfig": {
+    "iceServers": [{
+      "urls": ["turn:numb.viagenie.ca"],
+      "username": "tinguyenk19@icloud.com",
+      "credential": "X17071994x"
+    }]
+  },
+
+  "//": "REQUIRE https://github.com/citizenfx/screenshot-basic or set false",
+  "enableTakePhoto": true,
+  "fileUploadService_Url": "https://wew.wtf/upload.php",
+  "fileUploadService_Field": "files[]",
+
+  "background": {
+    "Thỏ con xinh sắn": "back001.jpg",
+    "Custom URL": "URL"
+  },
+  "background_default": {
+    "label": "Thỏ con xinh sắn",
+    "value": "back001.jpg"
+  },
+
+
+  "coque": {
+    "Sansumg S8": "s8.png",
+    "Iphone X": "iphonex.png",
+    "Brick Base": "base.png",
+    "Transparent": "transparent.png"
+  },
+  "coque_default": {
+    "label": "Sansumg S8",
+    "value": "s8.png"
+  },
+
+
+ 	"serviceCall": [
+		{
+			"display": "Đại lý bất động sản",
+			"backgroundColor": "pink",
+			"subMenu": [
+				{
+					"title": "Gửi tin nhắn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "realestateagent"
+					}
+				},
+				{
+					"title": "Vị trí hẹn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "realestateagent"
+					}
+				},
+				{
+					"title": "Hẹn mua hàng",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "realestateagent"
+					}
+				}
+			]
+		},
+		{
+			"display": "Cứu thương",
+			"backgroundColor": "red",
+			"subMenu": [
+				{
+					"title": "Gửi tin nhắn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "ambulance"
+					}
+				}
+			]		
+		},
+		{
+			"display": "Cứu Hộ",
+			"backgroundColor": "grey",
+			"subMenu": [
+				{
+					"title": "Gửi tin nhắn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic"
+					}
+				},
+				{
+					"title": "Sửa xe",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, xe của tôi bị hỏng bạn đến đây giúp tôi được hông zợ?"
+					}
+				},
+				{
+					"title": "Xe sắp nổ",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, xe của tôi bị hỏng bạn đến đây giúp tôi được hông zợ?"
+					}
+				},
+				{
+					"title": "Xe máy",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, xe của tôi bị hỏng bạn đến đây giúp tôi được hông zợ?"
+					}
+				},
+				{
+					"title": "Tai nạn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, xe của tôi bị hỏng bạn đến đây giúp tôi được hông zợ ?"
+					}
+				}
+			]
+		},
+		{
+			"display": "Cảnh sát",
+			"backgroundColor": "blue",
+			"subMenu": [
+				{
+					"title": "Gửi tin nhắn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "police"
+					}
+				},
+				{
+					"title": "911",
+					"eventName": "gcphone:autoCallNumber",
+					"type": {
+						"number": "911"
+					}
+				},
+				{
+					"title": "Báo cáo chuyến bay",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "police",
+						"message": "Đang diễn ra,cảm ơn bạn đã đến sớm !"
+					}
+				},
+				{
+					"title": "Báo cáo cuộc tấn công",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "police",
+						"message": "Tôi là nạn nhân huhu"
+					}
+				}
+			]
+		},
+		{
+			"display": "Taxi",
+			"backgroundColor": "yellow",
+			"subMenu": [
+				{
+					"title": "Gửi tin nhắn",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic"
+					}
+				},
+				{
+					"title": "Tàu nhanh",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, đến ship tôi được k đoạn ngắn hoy tôi chờ ?"
+					}
+				},
+				{
+					"title": "Hành trình dài",
+					"eventName": "esx_addons_gcphone:call",
+					"type": {
+						"number": "mechanic",
+						"message": "Xin chào, đến ship tôi được k đường dài tôi chờ ?"
+					}
+				}
+			]
+		}
+	],
+	
+  "defaultContacts": [{
+      "number": "ambulance",
+      "display": "Cứu thương",
+      "backgroundColor": "green",
+      "letter": "C"
+    },
+    {
+      "number": "police",
+      "display": "Cảnh sát",
+      "backgroundColor": "blue",
+      "letter": "C"
+    },
+	{
+      "number": "mechanic",
+      "display": "Cứu Hộ",
+      "backgroundColor": "black",
+      "letter": "C"
+    },
+	{
+      "number": "taxi",
+      "display": "Taxi",
+      "backgroundColor": "yellow",
+      "letter": "T"
+    }
+  ],
+
+  "apps": [{
+      "name": "MXHJav",
+      "fr_FR__name": "MXHJav",
+      "en_US__name": "MXHJav",
+      "de_DE__name": "MXHJav",
+      "pl_PL__name": "MXHJav",
+      "es_ES__name": "MXHJav",
+      "icons": "/html/static/img/icons_app/twitter.png",
+      "routeName": "twitter.splash",
+      "inHomePage": false
+    },
+    {
+      "name": "Điện thoại",
+      "fr_FR__name": "Điện thoại",
+      "cs_CZ__name": "Điện thoại",
+      "en_US__name": "Điện thoại",
+      "de_DE__name": "Điện thoại",
+      "pl_PL__name": "Điện thoại",
+      "es_ES__name": "Điện thoại",
+      "icons": "/html/static/img/icons_app/call.png",
+      "routeName": "appels",
+      "inHomePage": true
+    },
+    {
+      "name": "Tin nhắn",
+      "fr_FR__name": "Tin nhắn",
+      "en_US__name": "Tin nhắn",
+      "cs_CZ__name": "Tin nhắn",
+      "de_DE__name": "Tin nhắn",
+      "pl_PL__name": "Tin nhắn",
+      "es_ES__name": "Tin nhắn",
+      "icons": "/html/static/img/icons_app/sms.png",
+      "routeName": "messages",
+      "inHomePage": true,
+      "puceRef": "nbMessagesUnread"
+    },
+    {
+      "name": "Danh bạ",
+      "fr_FR__name": "Danh bạ",
+      "en_US__name": "Danh bạ",
+      "cs_CZ__name": "Danh bạ",
+      "de_DE__name": "Danh bạ",
+      "pl_PL__name": "Danh bạ",
+      "es_ES__name": "Contactos",
+      "icons": "/html/static/img/icons_app/contacts.png",
+      "routeName": "contacts",
+      "inHomePage": true
+    },
+    {
+      "name": "Cài đặt",
+      "fr_FR__name": "Cài đặt",
+      "en_US__name": "Cài đặt",
+      "cs_CZ__name": "Cài đặt",
+      "de_DE__name": "Cài đặt",
+      "pl_PL__name": "Cài đặt",
+      "es_ES__name": "Cài đặt",
+      "icons": "/html/static/img/icons_app/settings.png",
+      "routeName": "parametre",
+      "inHomePage": true
+    },
+    {
+      "name": "Bank",
+      "fr_FR__name": "Banque",
+      "en_US__name": "BankingOnline",
+      "cs_CZ__name": "Banka",
+      "de_DE__name": "Bank",
+      "pl_PL__name": "Lawka",
+      "es_ES__name": "Banquillo",
+      "icons": "/html/static/img/icons_app/bank.png",
+      "routeName": "bank",
+      "inHomePage": false
+    },
+    {
+      "name": "Sàn chứng khoán",
+      "fr_FR__name": "Sàn chứng khoán",
+      "cs_CZ__name": "Sàn chứng khoán",
+      "en_US__name": "Sàn chứng khoán",
+      "de_DE__name": "Sàn chứng khoán",
+      "icons": "/html/static/img/icons_app/bourse.png",
+      "routeName": "bourse",
+      "enabled": true
+    },
+    {
+      "name": "Máy ảnh",
+      "fr_FR__name": "Máy ảnh",
+      "cs_CZ__name": "Máy ảnh",
+      "en_US__name": "Máy ảnh",
+      "de_DE__name": "Máy ảnh",
+      "pl_PL__name": "Máy ảnh",
+      "es_ES__name": "Máy ảnh",
+      "icons": "/html/static/img/icons_app/photo.png",
+      "routeName": "photo"
+    },
+    {
+      "name": "Chat bí mật",
+      "fr_FR__name": "Chat bí mật",
+      "en_US__name": "Chat bí mật",
+      "de_DE__name": "Chat bí mật",
+      "pl_PL__name": "Chat bí mật",
+      "es_ES__name": "Chat bí mật",
+      "icons": "/html/static/img/icons_app/tchat.png",
+      "routeName": "tchat"
+    },
+    {
+      "name": "9GAG",
+      "icons": "/html/static/img/icons_app/9gag.png",
+      "routeName": "9gag"
+    }
+  ],
+  "defaultLanguage": "en_US",
+  "language": {
+    "en_US": {
+      "NAME": "Việt nam",
+      "PHONE_WARNING_MESSAGE": "Tin nhắn lưu trữ",
+      "PHONE_WARNING_MESSAGE_MESS": "Tin tức",
+      "CONFIRM": "Chấp nhận",
+      "CANCEL": "Từ chối",
+      "APP_CONFIG_TITLE": "Thông tin",
+      "APP_CONFIG_MY_MUNBER": "Số điện thoại của tôi",
+      "APP_CONFIG_WALLPAPER": "Hình nền",
+      "APP_CONFIG_CASE": "Loại điện thoại",
+      "APP_CONFIG_ZOOM": "Tỷ lệ phóng to",
+      "APP_CONFIG_VOLUME": "Âm lượng",
+      "APP_CONFIG_LANGUAGE": "Ngôn ngữ",
+      "APP_CONFIG_MOUSE_SUPPORT": "Trình điều khiển bằng chuột",
+      "APP_CONFIG_RESET": "Đặt về cài đặt gốc",
+      "APP_CONFIG_RESET_CONFIRM": "Đồng ý",
+      "APP_PHONE_CALL": "Gọi",
+      "APP_PHONE_DELETE": "Xóa",
+      "APP_PHONE_DELETE_ALL": "Xóa tất cả.",
+      "APP_PHONE_TITLE": "Gọi điện thoại",
+      "APP_PHONE_MENU_FAVORITES": "Yêu thích",
+      "APP_PHONE_MENU_RECENTS": "Gọi gần nhất",
+      "APP_PHONE_MENU_CONTACTS": "Danh bạ",
+      "APP_PHONE_ENTER_NUMBER": "Nhập số điện thoại",
+      "APP_BANK_TITLE": "Ngân hàng",
+      "APP_BOURSE_TITLE": "Giao dịch chứng khoán",
+      "APP_CONTACT_TITLE": "Chi tiết liên lạc",
+      "APP_CONTACT_NEW": "Thêm danh bạ mới",
+      "APP_CONTACT_EDIT": "Thay đổi tên danh bạ",
+      "APP_CONTACT_SAVE": "Lưu lại",
+      "APP_CONTACT_CANCEL": "Bỏ qua",
+      "APP_CONTACT_DELETE": "Xóa",
+      "APP_CONTACT_LABEL_NAME": "Họ và tên",
+      "APP_CONTACT_LABEL_NUMBER": "Số điện thoại",
+      "APP_MESSAGE_TITLE": "Tin nhắn",
+      "APP_MESSAGE_NEW_MESSAGE": "Gửi tin nhắn",
+      "APP_MESSAGE_ERASE_CONVERSATION": "Xóa cuộc gọi",
+      "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Xóa tất cả cuộc gọi.",
+      "APP_MESSAGE_SEND_GPS": "Gửi GPS",
+      "APP_MESSAGE_SET_GPS": "Vị trị GPS",
+      "APP_MESSAGE_ZOOM_IMG": "Phóng to",
+      "APP_MESSAGE_DELETE": "Xóa tin nhắn",
+      "APP_MESSAGE_SMS": "Tin nhắn văn bản",
+      "APP_MESSAGE_CONTACT_TITLE": "Danh bạ",
+      "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Nhập số điện thoại",
+      "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Nhập nội dung tin nhắn",
+	  "APP_PHONE_NUMBER_UNKNOWN": "Đang gọi",
+	  "APP_PHONE_NUMBER_HIDDEN": "Gọi ẩn danh",
+      "APP_DARKTCHAT_TITLE": "Chat bí mật",
+      "APP_DARKTCHAT_NEW_CHANNEL": "Tạo kênh chat mới",
+      "APP_DARKTCHAT_DELETE_CHANNEL": "Xóa kênh chat",
+      "APP_DARKTCHAT_CANCEL": "Bỏ qua",
+      "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Nhập nội dung tin nhắn",
+      "APP_TWITTER_NAME": "MXHJav",
+      "APP_TWITTER_VIEW_TWITTER": "MXHJav",
+      "APP_TWITTER_VIEW_TOP_TWEETS": "Nổi bật",
+      "APP_TWITTER_VIEW_TWEETER": "Đăng tin",
+      "APP_TWITTER_VIEW_SETTING": "Thông tin",
+      "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Tài khoản (>= 4)",
+      "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Mật khẩu (>= 6)",
+      "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Nhập lại mật khẩu",
+      "APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL Avatar",
+      "APP_TWITTER_PLACEHOLDER_MESSAGE": "Hôm nay đẹp trời, có chuyện gì xảy ra với bạn không?",
+      "APP_TWITTER_BUTTON_ACTION_TWEETER": "MXHJav",
+      "APP_TWITTER_ACCOUNT_LOGIN": "Đăng nhập",
+      "APP_TWITTER_ACCOUNT_LOGOUT": "Đăng xuất",
+      "APP_TWITTER_ACCOUNT_PARAM": "Tài khoản của tôi",
+      "APP_TWITTER_ACCOUNT_AVATAR": "Thay đổi Avatar",
+      "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Thay đổi mật khẩu",
+      "APP_TWITTER_ACCOUNT_NEW": "Tạo mới",
+      "APP_TWIITER_ACCOUNT_SAVE": "Đăng ký",
+      "APP_TWIITER_ACCOUNT_CREATE": "Tạo tài khoản",
+      "APP_TWIITER_ACCOUNT_CANCEL": "Bỏ qua",
+      "APP_TWITTER_ACCOUNT_USERNAME": "Tài khoản",
+      "APP_TWITTER_ACCOUNT_PASSWORD": "Mật khẩu",
+      "APP_TWITTER_NOTIFICATION": "Thông báo",
+      "APP_TWITTER_NOTIFICATION_WHEN": "Để được thông báo",
+      "APP_TWITTER_NOTIFICATION_ALL": "Tất cả tin mới",
+      "APP_TWITTER_NOTIFICATION_MENTION": "Chỉ tin được đánh dấu",
+      "APP_TWITTER_NOTIFICATION_NEVER": "Không một ai",
+      "APP_TWITTER_NOTIFICATION_SOUND": "Phát ra âm thanh",
+      "APP_TWITTER_NOTIFICATION_SOUND_YES": "Có",
+      "APP_TWITTER_NOTIFICATION_SOUND_NO": "Không",
+      "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Tài khoản MXHJav của bạn đã được tạo.",
+      "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Không thể tạo tài khoản(tên người dùng đã được sử dụng?)",
+      "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Bạn đã kết nối với MXHJav.",
+      "APP_TWITTER_NOTIF_LOGIN_ERROR": "Sai tài khoản / mật khẩu",
+      "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "ảnh đại diện đã được thay đổi!",
+      "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Mật khẩu đã được thay đổi.",
+      "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Lỗi khi đổi mật khẩu.",
+      "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Mật khẩu không đúng",
+      "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Mật khẩu quá ngắn",
+
+      "TIMEAGO": [
+        "just now",
+        ["%s giây trước", "%s giây trước"],
+        ["%s phút trước", "%s phút trước"],
+        ["%s giờ trước", "%s giờ trước"],
+        ["%s ngày trước", "%s ngày trước"],
+        ["%s tuần trước", "%s tuần trước"],
+        ["%s tháng trước", "%s tháng trước"],
+        ["%s năm trước", "%s năm trước"]
+      ]
+    }
+  }
+}

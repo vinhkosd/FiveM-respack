@@ -1,0 +1,18 @@
+Locales['en'] = {
+  ['shop_robbery'] = 'Cướp Tạp Hóa',
+  ['press_to_rob'] = 'Nhấn ~r~[E]~w~ để cướp ~b~%s~s~',
+  ['robbery_timer'] = 'Thời gian: ~r~%s~s~ giây',
+  ['recently_robbed'] = 'Cửa hàng đã bị cướp.\nVui lòng đợi: ~r~%s giây',
+  ['rob_in_prog'] = 'Xảy ra vụ cướp tạp hóa:\n~r~%s',
+  ['started_to_rob'] = 'Một vụ cướp xảy ra trong thành phố !!!',
+  ['alarm_triggered'] = 'Chờ 5 phút để nhận tiền ~g~...',
+  ['robbery_complete'] = 'Đã bình tĩnh trở lại,\nnhận được:~r~$ %s',
+  ['robbery_complete_at'] = 'Cướp thành công:\n%s',
+  ['robbery_cancelled'] = 'Vụ cướp đã bị hủy!!!',
+  ['robbery_cancelled_at'] = 'Hủy cướp tại:\n~r~%s',
+  ['min_police'] = 'Cần ít nhất ~b~%s Cảnh Sát~s~ để cướp',
+  ['robbery_already'] = 'Cửa hàng này đã bị cướp~g~...',
+  ['no_threat'] = 'Bạn phải cầm vũ khí !',
+  ['police_cannot_rob'] = '~r~Cảnh sát không thể cướp',
+  ['robbery_remaining'] = 'Đợi ~r~%s~w~ giây nữa để cướp',
+}

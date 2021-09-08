@@ -1,0 +1,2 @@
+ALTER TABLE `users`
+	ADD COLUMN `coin` INT NULL DEFAULT '2' AFTER `money`;

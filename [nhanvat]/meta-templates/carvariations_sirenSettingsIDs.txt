@@ -1,0 +1,13 @@
+The sirenSettings value can be found at the bottom of a carvariations.meta entry for a vehicle.
+This is only used if the vehicle is non-ELS. If you use a custom carcols mod, these values may have been changed - consult the documentation of the carcols mod you installed.
+
+<sirenSettings value="0" /> = No Siren (civilian vehicles).
+<sirenSettings value="1" /> = This siren lights is used by Police Buffalo, Police Riot, Park Ranger SUV and Sheriff Granger (will most likely work fine with your custom vehicle).
+<sirenSettings value="2" /> = This siren lights is used by Police Interceptor.
+<sirenSettings value="4" /> = This siren lights is used by Ambulance.
+<sirenSettings value="5" /> = This siren lights is used by NYSP Police Roadcruiser, NYSP Police Rancher and LSPD Police Transporter.
+<sirenSettings value="6" /> = This siren lights is used by Police Bike
+<sirenSettings value="7" /> = This siren lights is used by Fire Truck
+<sirenSettings value="9" /> = This siren lights is used by Tow Truck and one of Boxville models.
+<sirenSettings value="10" /> = This siren lights is used by Lifeguard SUV.
+<sirenSettings value="13" /> = This siren lights is used by Stanier Police Cruiser and Sheriff Cruiser (rotators).

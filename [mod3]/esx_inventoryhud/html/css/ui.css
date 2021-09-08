@@ -1,0 +1,368 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+    /*text-transform: uppercase;*/
+    color: white;
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+
+}
+
+.ui {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;    
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    z-index: 0;
+}
+
+.inventory {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1550px;
+    height: 600px;
+    box-shadow: 1px 1px 10px rgba(58, 58, 58, 0.3);
+    background-color: rgba(235, 235, 235, 0.01);
+}
+
+#playerInventory {
+    width: 625px;
+    height: 600px;
+    float: left;
+    overflow-y: scroll
+}
+
+#playerInventoryFastItems {
+    width: 650px;
+    height: 50px;
+	position : absolute;
+	bottom : 90.4%;
+	left: 0%;
+	z-index: 100;
+	float:left;
+}
+
+#controls {
+    width: 300px;
+    height: 600px;
+    float: left;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.01);
+    left: 0%;
+    top: 0%;
+}
+
+#otherInventory {
+    width: 625px;
+    height: 600px;
+    float: left;
+    overflow-y: scroll
+}
+
+#count {
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.slot {
+    float: left;
+    width: 100px;
+    height: 100px;
+    bottom : -25%;
+    background-color: rgba(235, 235, 235, 0.05); /* 0,02 */
+    margin: 2px;
+    position: relative;
+}
+
+.slotfix {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(235, 235, 235, 0.05); /* 0,02 */
+    margin: 2px;
+    position: relative;
+}
+
+.slot:hover {
+    opacity: 0.8;
+    background-color: rgba(110, 110, 110, 0.5);
+}
+
+.slotFast {
+    float: left;
+    width: 100px;
+    height: 100px;
+    bottom : -50%;
+    background-color: rgba(235, 235, 235, 0.05); /* 0,02 */
+    margin: 2px;
+    position: relative;
+}
+
+.slotFast:hover {
+    opacity: 0.8;
+}
+
+.item,
+.item-other {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.item-name {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100px;
+    min-height: 14px;
+    font-size: 10px;
+    background-color: rgba(0,0,0,0.35);
+}
+
+.ui-draggable-dragging .item-name,
+.ui-draggable-dragging .item-count {
+    display: none;
+}
+
+.item-count {
+    position: absolute;
+    top: 0;
+    text-align: right;
+    width: 100px;
+    height: 20px;
+    z-index: 500;
+    font-size: 10px;
+}
+
+.keybind {
+    position: absolute;
+    top: 0;
+    text-align: left;
+    width: 20px;
+    height: 20px;
+    z-index: 500;
+    font-size: 15px;
+	background-color: rgba(235, 235, 235, 0.05); /* 0,02 */
+    border-color: rgba(255,255,255,0.1);
+	text-align: center;
+}
+
+.ammoIcon {
+    width: 10px;
+    height: 10px;
+}
+
+.info-div {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.01);
+    width: 15%;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.info-div2 {
+    text-align: left;
+    padding: 5px;
+    background-color: rgba(110, 110, 110, 0.5);
+    width: 15%;
+    position: relative;
+    left: -50%;
+    font-size: 15px;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.controls-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.control {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(26, 0, 121, 0.5);
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+	float: left;
+    font-size: 10px;
+}
+
+.control.disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hoverControl {
+    background-color: rgba(235, 235, 235, 0.1);
+}
+
+.used-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(124, 124, 124, 0.356);
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-width: 1px 1px 1px 1px;
+}
+
+#used-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/used-item.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: 0;
+}
+
+.added-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(124, 124, 124, 0.356);
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-width: 1px 1px 1px 1px;
+}
+
+#added-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/added-item.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: 0;
+}
+
+.item-name-bg {
+    width: 100%;
+    width: 117px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+#playerInventory::-webkit-scrollbar-track,
+#otherInventory::-webkit-scrollbar-track {
+    background-color: none;
+    border: none;
+}
+
+#playerInventory::-webkit-scrollbar,
+#otherInventory::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(182, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#playerInventory::-webkit-scrollbar-thumb,
+#otherInventory::-webkit-scrollbar-thumb {
+    background-color: rgba(182, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nearbyPlayerButton {
+    width: 100%;
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+    padding: 2px;
+    background-color: rgba(110, 110, 110, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: none;
+    font-size: 14px !important;
+    outline: none;
+    text-transform: none;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+}
+
+.nearbyPlayerButton:hover {
+    background-color: rgba(235, 235, 235, 0.1);
+}
+
+#noSecondInventoryMessage {
+    width: 615px;
+    height: 580px;
+    line-height: 580px;
+    text-align: center;
+}
+
+@media (max-width: 1500px) {
+    .inventory {
+        width: 1300px;
+    }
+
+    #playerInventory {
+        width: 550px;
+    }
+
+    #controls {
+        width: 200px;
+    }
+
+    #otherInventory {
+        width: 550px;
+    }
+
+    #noSecondInventoryMessage {
+        width: 540px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .inventory {
+        width: 1000px;
+    }
+
+    #playerInventory {
+        width: 425px;
+    }
+
+    #controls {
+        width: 150px;
+    }
+
+    #otherInventory {
+        width: 425px;
+    }
+
+    #noSecondInventoryMessage {
+        width: 420px;
+    }
+}

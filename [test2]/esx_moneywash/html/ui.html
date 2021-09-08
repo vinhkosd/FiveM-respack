@@ -1,0 +1,41 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="css/app.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	</head>
+    <body>
+    	<div class="container" id="container">
+<!-- ########### GENERAL ###########  -->
+    		<div class="cont-content" id="general">
+    			<div class="flex">
+    				<div class="btn btn-blue banniere">
+    					<p>Nhập số tiền cần rửa</p>
+    				</div>
+    				<button class="btn btn-grey back" id="goback_btn">
+    					<i class="fas fa-bars"></i>
+	    				<span class="fas fa-arrow-left icon"></span>
+	    				<p style="padding-top: 1em;">Quay lại</p>
+    				</button>
+    			</div>
+    			<form id="deposit1">
+    				<div class="input-cont box-shadow">
+    					<label>Bạn muốn rửa bao nhiêu tiền</label>
+    					<input id="withdraw_amount" type="number" placeholder="0">
+    				</div>
+    				<button class="btn btn-green" id="withdraw_btn">
+    					<i class="fas fa-check"></i>
+	    				<span class="fas fa-check icon"></span>
+	    				<p style="padding-top: 1em;">Xác nhận<br>
+	    				<span>Rửa tiền</span></p>
+    				</button>
+				</form>
+	    	</div>
+    	</div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="scripts/app.js"></script>
+    </body>
+  </html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+  	<link id="font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700,900&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<title>TREW UI</title>
+</head>
+
+<body style="font-family: 'Oswald'">
+	<div id="ui">
+
+
+
+
+
+
+		<div class="info server">
+			<div id="server"><img src=""></div>
+		</div>
+
+
+
+
+
+
+
+		<div class="info player">
+			<div id="job"><span></span></div>
+			<div id="job2" style="color: rgb(229, 128, 128);"><span>Không Có</span></div>
+			<div id="money">
+				<div class="icon text" id="society" style="display: none;"><i class="fas fa-briefcase"></i><span>0</span></div>
+				<div class="icon text" id="bank" style="display: none;"><i class="fas fa-piggy-bank"></i><span>0</span></div>
+				<div class="icon text" id="blackMoney" style="display: none;"><i class="fas fa-user-ninja"></i><span>0</span></div>
+				<div class="icon text" id="wallet" style="display: none;"><i class="fas fa-dollar-sign"></i><span>0</span></div>
+			</div>
+
+			<div id="status">
+				<ul>
+					<li class="icon" id="thirst" style="display: none;"><i class="fas fa-tint"></i><span></span></li>
+					<li class="icon" id="hunger" style="display: none;"><i class="fas fa-utensils"></i><span></span></li>
+					<li class="icon" id="stamina" style="display: none;"><i class="fas fa-running"></i><span></span></li>
+					<li class="icon" id="armor" style="display: none;"><i class="fas fa-shield-alt"></i><span></span></li>
+					<li class="icon" id="health" style="display: none;"><i class="fas fa-heart"></i><span></span></li>
+				</ul>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<div class="info vehicle inactive animated">
+
+			<div id="speedometer">
+
+
+				<div id="progress-speed">
+					<svg viewBox="0 0 100 100">
+						<circle cx="50" cy="50" r="45" class="mask" />
+						<circle cx="50" cy="50" r="45" class="speed" />
+
+						<defs>
+							<linearGradient id="speed-gradient">
+							    <stop offset="0%" stop-color="#ff0000"/>
+							    <stop offset="75%" stop-color="#ffee00"/>
+							    <stop offset="100%" stop-color="#10dea3"/>
+							</linearGradient>
+						</defs>
+					</svg>
+					<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" class="border" /></svg>
+				</div>
+
+
+
+				<div id="vehicle-speed">
+					<span>999</span>
+					<strong>KM/H</strong>
+				</div>
+
+
+
+				<div id="vehicle-gear" class="icon text"><i><img src="img/vehicle-gear.png"></i><span>N</span></div>
+
+
+			
+				<div id="vehicle-status-left">
+					<ul>
+						<li class="icon off" id="seatbelt"><i><img src="img/vehicle-seatbelt.png"></i><span style="height: 100%"></span></li>
+						<li class="icon" id="fuel"><i class="fas fa-gas-pump"></i><span></span></li>
+					</ul>
+				</div>
+
+
+				<div id="vehicle-status-right">
+					<ul>
+						<li class="icon normal" id="lights"><i><img src="img/vehicle-lights.png"></i><span></span></li>
+						<li class="icon" id="signals" class="off"><i class="fas fa-arrows-alt-h"></i><span style="height: 100%"></span></li>
+					</ul>
+				</div>
+
+
+
+			</div>
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+		<div class="info notify animated" id="notify">
+			<div class="background">
+ 				<div class="title"><i class="fab"></i> <span>Admin</span></div>
+				<div class="msg">Tin Nhan</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="info radio">
+			<div id="voice" style="display: none;"><i class="fas fa-microphone-alt"></i></div>
+		</div>
+
+
+
+
+
+
+
+		<div class="info time-and-place">
+			<div class="data">
+				<div id="date" style="display: none;"><span>Hom nay la <strong>2 thang 10 nam 2019</strong></span></div>
+				<div id="location" style="display: none;"><span>Ban dang o trong <strong>Thanh Pho Los Santos</strong></span></div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+	<audio id="sounds"><source type="audio/ogg"></audio>
+
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

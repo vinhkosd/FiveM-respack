@@ -1,0 +1,17 @@
+Locales['en'] = {
+  ['not_enough_money']    = 'ban khong du tien',
+  ['aircraft_belongs']    = 'chiec may bay ~y~%s~s~ gio thuoc ve ~b~ban~s~',
+  ['generic_shopitem']    = '$%s',
+  ['aircraft_dealer']     = 'Cửa Hàng Máy Bay',
+  ['buy_aircraft_shop']   = 'ban co muon mua %s voi $%s?',
+  ['buy_license']         = 'mua giay phep',
+  ['no']                  = 'khong',
+  ['yes']                 = 'co',
+  ['aircraft_purchased']  = 'ban da mua mot chiec may bay',
+  ['shop_menu']           = 'nhan ~INPUT_CONTEXT~ de truy cap menu',
+  ['shop_awaiting_model'] = 'phuong tien dang ~g~DOWNLOADING & LOADING~s~ vui long doi',
+  ['sell_menu']           = 'nhan ~INPUT_CONTEXT~ de ban ~y~%s~s~ cho ~g~$%s~s~',
+  ['license_missing']     = 'ban don\'t co mot chiec may bay\'s License!',
+  ['aircraft_sold_for']   = 'the ~b~%s~s~ has been ~y~sold~s~ for ~g~$%s~s~',
+  ['not_yours']           = 'phuong tien nay khong thuoc ve ban',
+}

@@ -1,0 +1,18 @@
+Locales['en'] = {
+  ['actions']                           = 'thao tac',
+  ['amount']                            = 'so tien',
+  ['balance']                           = 'tien du',
+  ['bank']                              = 'Ngân Hàng',
+  ['bill_amount']                       = 'hoa doan',
+  ['billing']                           = 'thanh toan',
+  ['customer']                          = 'khach hang',
+  ['customers']                         = 'khach hang',
+  ['deposit']                           = 'tien gui',
+  ['invalid_amount']                    = 'tien khong hop le',
+  ['no_player_nearby']                  = 'khong co nguoi choi nao gan do',
+  ['press_input_context_to_open_menu']  = 'nhan ~INPUT_CONTEXT~ de mo ~g~ngan hang Menu~s~.',
+  ['withdraw']                          = 'rut',
+  ['boss_actions']                      = 'boss Actions',
+  ['phone_receive']                     = 'khach cua ngan hang',
+  ['phone_label']                       = 'bank',
+}

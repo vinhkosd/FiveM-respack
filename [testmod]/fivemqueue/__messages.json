@@ -1,0 +1,14 @@
+﻿{
+  "Gathering": "Thu thập thông tin hàng chờ",
+  "License": "Cần có giấy phép",
+  "Steam": "Cần có tài khoản steam",
+  "Banned": "Bạn đã bị cấm vĩnh viễn. Nếu có thắc mắc vui lòng liên hệ admin : discord.gg/tYzdnJf",
+  "Whitelist": "bạn không thuộc hàng chờ ưu tiên",
+  "Queue": "Bạn đang xếp hàng",
+  "PriorityQueue": "Bạn đang xếp hàng chờ ưu tiên",
+  "Canceled": "Đã rời khỏi hàng chờ",
+  "Error": "Oops! Có lỗi rồi.",
+  "Timeout": "Vượt quá ngưỡng thời gian chờ kết nối. Hãy thử đăng nhập lại",
+  "QueueCount": "[Hàng chờ: {0}]",
+  "Symbols": "Tên sai quy định"
+}

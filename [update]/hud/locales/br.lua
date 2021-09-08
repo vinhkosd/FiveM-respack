@@ -1,0 +1,72 @@
+Locales['br'] = {
+	['you_are_on_location'] = 'Bạn đang ở chổ <strong>%s</strong>',
+
+	['date_format'] = {
+		default = 'Hôm nay là <strong>%s của %s năm %s</strong>',
+		withWeekday = 'Hôm nay là <strong>%s, %s cua %s cua %s</strong>',
+		withHours = 'La <strong>%s</strong> trong ngay <strong>%s cua %s cua %s</strong>',
+		withWeekdayAndHours = 'La <strong>%s</strong> cua <strong>%s, %s cua %s cua %s</strong>'
+	},
+
+	['weekDay_0'] = 'Chu Nhat',
+	['weekDay_1'] = 'Thu Hai',
+	['weekDay_2'] = 'Thu Ba',
+	['weekDay_3'] = 'Thu Tu',
+	['weekDay_4'] = 'Thu Nam',
+	['weekDay_5'] = 'Thu Sau',
+	['weekDay_6'] = 'Thu Bay',
+
+	['day_1'] = 'Ngày 01',
+	['day_2'] = 'Ngày 02',
+	['day_3'] = 'Ngày 03',
+	['day_4'] = 'Ngày 04',
+	['day_5'] = 'Ngày 05',
+	['day_6'] = 'Ngày 06',
+	['day_7'] = 'Ngày 07',
+	['day_8'] = 'Ngày 08',
+	['day_9'] = 'Ngày 09',
+
+	['day_10'] = 'Ngày 10',
+	['day_11'] = 'Ngày 11',
+	['day_12'] = 'Ngày 12',
+	['day_13'] = 'Ngày 13',
+	['day_14'] = 'Ngày 14',
+	['day_15'] = 'Ngày 15',
+	['day_16'] = 'Ngày 16',
+	['day_17'] = 'Ngày 17',
+	['day_18'] = 'Ngày 18',
+	['day_19'] = 'Ngày 19',
+
+	['day_20'] = 'Ngày 20',
+	['day_21'] = 'Ngày 21',
+	['day_22'] = 'Ngày 22',
+	['day_23'] = 'Ngày 23',
+	['day_24'] = 'Ngày 24',
+	['day_25'] = 'Ngày 25',
+	['day_26'] = 'Ngày 26',
+	['day_27'] = 'Ngày 27',
+	['day_28'] = 'Ngày 28',
+	['day_29'] = 'Ngày 29',
+
+	['day_30'] = 'Ngày 30',
+	['day_31'] = 'Ngày 31',
+
+	['month_0'] = 'Tháng 1',
+	['month_1'] = 'Tháng 2',
+	['month_2'] = 'Tháng 3',
+	['month_3'] = 'Tháng 4',
+	['month_4'] = 'Tháng 5',
+	['month_5'] = 'Tháng 6',
+	['month_6'] = 'Tháng 7',
+	['month_7'] = 'Tháng 8',
+	['month_8'] = 'Tháng 9',
+	['month_9'] = 'Tháng 10',
+	['month_10'] = 'Tháng 11',
+	['month_11'] = 'Tháng 12',
+
+	['toggleui'] = 'Bat/Tat bo phan HUD',
+
+	['notify_title'] = 'Tieu De',
+	['notify_msg'] = 'Thong Diep',
+	['notify_notification'] = 'Thong Bao',
+}

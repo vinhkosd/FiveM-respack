@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Condensed');
+
+body {
+    background-color: transparent !important;
+	font-family: 'Poppins', sans-serif;
+}
+
+.template, .notification {
+    display: none;
+}
+
+.notif-container {
+    width: 20%;
+    position: absolute;
+	top: 80%;
+    right: 40%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.notification {
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 5px;
+    font: caption;
+    font-size: 15px;
+	box-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+	
+}
+
+.success {
+    background: rgba(114, 204, 114, 0.5);
+    color: #fff;
+}
+
+.inform {
+    background-color: rgba(47, 92, 115, 0.5);
+    color: #ffffff;
+}
+
+.error {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.police {
+    background: rgba(52, 131, 235, 0.5);
+    color: #fff;
+}

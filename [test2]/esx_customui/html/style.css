@@ -1,0 +1,125 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+* {padding: 0; margin: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+
+.playerStats{
+	display: flex;
+	position: absolute;
+	 /* Fix for all 16:9 resolutions */
+	width: 100%;
+	justify-content: center;
+	top: 5px;
+}
+
+.carStats{
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	display: none;
+}
+
+.stat{
+	color: #fff;
+	background: rgba(0,0,0,0.65);
+	border-radius: 0.7vw;
+	width: 11.57VW;
+	height: 2.777777vh;
+	position: relative;
+	margin-left: 0.3684210526315789VW;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+.stat .icon{
+	height: 2.7777777777777777VH;
+	width: 1.5789473684210527VW;
+	border-radius: 50%;
+	position: relative;
+	margin-left: 5px;
+	display: inline-block;
+	right: 0px;
+}
+
+.stat .icon i, .stat .icon img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.stat .icon img{
+	height: 18px;
+	width: 18px;
+}
+
+
+.stat span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+.carStats .stat{
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	text-align: right;
+}
+
+.carStats .stat .icon{
+	float: right;
+	right: 0px;
+	left: 15px;
+}
+
+.carStats .stat span{
+	white-space: nowrap;
+	right: 20px;
+}
+
+.status{
+	display: flex;
+	width: 195px;
+	position: relative;
+	left: -15px;
+	justify-content: space-between;
+}
+
+.veh-gas{
+	display: flex;
+	width: 235px;
+	position: relative;
+	right: -15px;
+	justify-content: space-between;
+}
+
+
+.vert-stat{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.vert-stat .bg{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.vert-stat img{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+#gas{
+	position: absolute;
+	right: 100px;
+	bottom: 50px;
+
+}

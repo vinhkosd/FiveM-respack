@@ -90,7 +90,7 @@ end
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
-    if IsControlJustReleased(0, 182) and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'action_menu') then
+    if IsControlJustReleased(0, 311) and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'action_menu') then
 		OpenActionMenuInteraction()
     end
   end

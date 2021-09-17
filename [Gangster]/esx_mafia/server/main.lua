@@ -470,11 +470,9 @@ PerformHttpRequest('https://raw.githubusercontent.com/Flatracer/FiveM_Resources/
 		print('##')
 		if CurrentVersion ~= NewestVersion then
 			print('## Đã Update!')
-			print('## Coder Ốm Tv')
 			print('##############')
 		else
 			print('## Đã Update!')
-			print('## Coder Ốm Tv')
 			print('##############')
 		end
 		print('\n')

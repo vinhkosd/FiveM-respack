@@ -4,10 +4,10 @@ Config.IncludeCash = true -- Include cash in inventory?
 Config.IncludeWeapons = true -- Include weapons in inventory?
 Config.IncludeAccounts = true -- Include accounts (bank, black money, ...)?
 Config.ExcludeAccountsList = {"bank", "money"} -- List of accounts names to exclude from inventory
-Config.CheckOwnership = false -- If true, Only owner of vehicle can store items in trunk.
+Config.CheckOwnership = true -- If true, Only owner of vehicle can store items in trunk.
 Config.AllowPolice = false -- If true, police will be able to search players' trunks.
 Config.OpenControl = 289 -- Key for opening inventory. Edit html/js/config.js to change key for closing it.
-Config.OpenKey = 246 -- Key for opening trunk
+Config.OpenKey = 182 -- Key for opening trunk
 
 -- List of item names that will close ui when used
 Config.CloseUiItems = {"headbag", "fishingrod", "tunerlaptop", "binoculars", "gps", "joint", "cigarette", "cigar", "fixkit", "rollingpaper", "cocaine", "meth"}
@@ -136,7 +136,7 @@ Config.Shops = {
 }
 
 -- Limit, unit can be whatever you want. Originally grams (as average people can hold 25kg)
-Config.Limit = 25000
+Config.Limit = 80000
 
 -- Default weight for an item:
 -- weight == 0 : The item do not affect character inventory weight

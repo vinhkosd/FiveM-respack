@@ -132,13 +132,13 @@ Citizen.CreateThread(function()
 			end
 			if IsDisabledControlJustPressed(0, 106) then --if LeftClick is pressed, send error message
 				SetCurrentPedWeapon(player,GetHashKey("WEAPON_UNARMED"),true) -- If they click it will set them to unarmed
-				TriggerEvent("pNotify:SendNotification",{
-					text = "<b style='color:#1E90FF'>Bạn không thể làm điều đó trong vòng an toàn</b>",
-					type = "error",
-					timeout = (3000),
-					layout = "bottomcenter",
-					queue = "global"
-				})
+				-- TriggerEvent("pNotify:SendNotification",{
+				-- 	text = "<b style='color:#1E90FF'>Bạn không thể làm điều đó trong vòng an toàn</b>",
+				-- 	type = "error",
+				-- 	timeout = (3000),
+				-- 	layout = "bottomcenter",
+				-- 	queue = "global"
+				-- })
 			end
 		end
 		-- Comment out lines 142 - 145 if you dont want a marker.

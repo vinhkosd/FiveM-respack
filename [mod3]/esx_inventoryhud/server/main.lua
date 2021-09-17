@@ -4,9 +4,21 @@ TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback("esx_inventoryhud:getPlayerInventory", function(source, cb, target)
 	local targetXPlayer = ESX.GetPlayerFromId(target)
-
+	
 	if targetXPlayer ~= nil then
-		cb({inventory = targetXPlayer.inventory, money = targetXPlayer.getMoney(), accounts = targetXPlayer.accounts, weapons = targetXPlayer.loadout})
+		local counter = 0
+		for index in pairs(ESX.Items) do
+		counter = counter + 1
+		end
+
+		if counter == 0 then
+			TriggerEvent("esx:getSharedObject", function(obj) 
+				ESX = obj 
+				cb({inventory = targetXPlayer.inventory, money = targetXPlayer.getMoney(), accounts = targetXPlayer.accounts, weapons = targetXPlayer.loadout, Items = ESX.Items})
+			end)
+		else
+			cb({inventory = targetXPlayer.inventory, money = targetXPlayer.getMoney(), accounts = targetXPlayer.accounts, weapons = targetXPlayer.loadout, Items = ESX.Items})
+		end
 	else
 		cb(nil)
 	end
@@ -303,9 +315,6 @@ AddEventHandler("suku:SellItemToPlayer",function(source, type, item, count)
 
     if type == "item_standard" then
         local targetItem = xPlayer.getInventoryItem(item)
-		print('targetItem'..json.encode(targetItem))
-		print('item'..item)
-		print('item'..count)
         if targetItem.limit == -1 or xPlayer.canCarryItem(item, count) then
             local list = itemShopList
             for i = 1, #list, 1 do
@@ -398,4 +407,13 @@ AddEventHandler('suku:buyLicense', function ()
 	else
 		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Bạn không đủ tiền!' })
 	end
+end)
+
+RegisterServerEvent('esx_inventoryhud:addPickupItem')
+AddEventHandler('esx_inventoryhud:addPickupItem', function (type, itemName, itemCount)
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local xItem = xPlayer.getInventoryItem(itemName)
+	local pickupLabel = ('~y~%s~s~ [~b~%s~s~]'):format(xItem.label, itemCount)
+	ESX.CreatePickup('item_standard', itemName, itemCount, pickupLabel, _source)
 end)

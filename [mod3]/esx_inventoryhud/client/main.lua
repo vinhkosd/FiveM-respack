@@ -160,6 +160,7 @@ RegisterNUICallback("DropItem", function(data, cb)
 
 	if type(data.number) == "number" and math.floor(data.number) == data.number then
 		TriggerServerEvent("esx:removeInventoryItem", data.item.type, data.item.name, data.number)
+        TriggerServerEvent("esx_inventoryhud:addPickupItem", data.item.type, data.item.name, data.number)
 	end
 
         Wait(500)
@@ -182,16 +183,15 @@ RegisterNUICallback("GiveItem", function(data, cb)
 
 	if foundPlayer then
 		local count = tonumber(data.number)
-
         if data.item.type == "item_weapon" then
             count = GetAmmoInPedWeapon(PlayerPedId(), GetHashKey(data.item.name))
         end
 
-        if data.item.type == "item_money" then
-            TriggerServerEvent("esx:giveInventoryItem", data.player, "item_account", "money", count)
-        else
+        -- if data.item.type == "item_money" then
+            -- TriggerServerEvent("esx:giveInventoryItem", data.player, "item_account", "money", count)
+        -- else
             TriggerServerEvent("esx:giveInventoryItem", data.player, data.item.type, data.item.name, count)
-        end
+        -- end
         Wait(250)
         loadPlayerInventory()
     else
@@ -237,8 +237,8 @@ function getInventoryWeight(inventory)
     for i = 1, #inventory, 1 do
       if inventory[i] ~= nil then
         itemWeight = Config.DefaultWeight
-        if arrayWeight[inventory[i].name] ~= nil then
-          itemWeight = arrayWeight[inventory[i].name]
+        if ESX.Items[inventory[i].name] ~= nil then
+          itemWeight = ESX.Items[inventory[i].name].weight
         end
         weight = weight + (itemWeight * (inventory[i].count or 1))
       end
@@ -354,20 +354,20 @@ function loadPlayerInventory()
                 end
             end
 			
-			local arrayWeight = Config.localWeight
+			local arrayWeight = data.Items
 			local weight = 0
 			local itemWeight = 0
 			local itemsW = 0
 			if items ~= nil then
 			for i = 1, #items, 1 do
 				if items[i] ~= nil then
-				  itemWeight = Config.DefaultWeight
-				  itemWeight = itemWeight / items[1].count * 0.0
-				if arrayWeight[items[i].name] ~= nil then
-				  itemWeight = arrayWeight[items[i].name]
-				  items[i].limit = itemWeight / 1000
-				end
-				  weight = weight + (itemWeight * (items[i].count or 1))
+                    itemWeight = Config.DefaultWeight
+                    itemWeight = itemWeight / items[1].count * 0.0
+                    if data.Items[items[i].name] ~= nil then
+                        itemWeight = data.Items[items[i].name].weight
+                        items[i].limit = itemWeight / 1000
+                    end
+				    weight = weight + (itemWeight * (items[i].count or 1))
 				end
 		      end
 			end
@@ -377,7 +377,7 @@ function loadPlayerInventory()
             if weight > Config.Limit then
                 -- exports['mythic_notify']:SendAlert('error', 'Inventário Cheio! Não Consegues Andar')
 				TriggerEvent("pNotify:SendNotification",  {
-					text =  'Inventário Cheio! Não Consegues Andar',
+					text =  'Cân nặng túi không hợp lệ, không thể di chuy',
 					type = "error",
 					timeout = 2000,
 					layout = "centerLeft"
@@ -389,13 +389,16 @@ function loadPlayerInventory()
 			   setNotHurt()
 			   texts =  _U("player_info", GetPlayerName(PlayerId()), (weight / 1000), (Config.Limit / 1000))
 			end
+
+            local weightInfo = _U("weight_info", (weight / 1000), (Config.Limit / 1000))
 			
             SendNUIMessage(
                 {
                     action = "setItems",
                     itemList = items,
                     fastItems = fastItems,
-					text = texts
+					text = texts,
+                    weight = weightInfo
                 })	
         end, GetPlayerServerId(PlayerId())
     )
@@ -516,7 +519,7 @@ Citizen.CreateThread(
                 DisableControlAction(0, 45, true) -- Reload
                 DisableControlAction(0, 22, true) -- Jump
                 DisableControlAction(0, 44, true) -- Cover
-                -- DisableControlAction(0, 37, true) -- Select Weapon --disable TAB button
+                DisableControlAction(0, 37, true) -- Select Weapon --disable TAB button
                 DisableControlAction(0, 23, true) -- Also 'enter'?
 
                 DisableControlAction(0, 288, true) -- Disable phone
@@ -549,16 +552,16 @@ Citizen.CreateThread(
 end)
 
 -- HIDE WEAPON WHEEL
--- Citizen.CreateThread(function ()
--- 	Citizen.Wait(2000)
--- 	while true do
--- 		Citizen.Wait(0)
--- 		HideHudComponentThisFrame(19)
--- 		HideHudComponentThisFrame(20)
--- 		BlockWeaponWheelThisFrame()--disable TAB button
--- 		DisableControlAction(0, 37,true)--disable TAB button
--- 	end
--- end)
+Citizen.CreateThread(function ()
+	Citizen.Wait(2000)
+	while true do
+		Citizen.Wait(0)
+		HideHudComponentThisFrame(19)
+		HideHudComponentThisFrame(20)
+		BlockWeaponWheelThisFrame()--disable TAB button
+		DisableControlAction(0, 37,true)--disable TAB button
+	end
+end)
 
 --FAST ITEMS
 RegisterNUICallback("PutIntoFast", function(data, cb)

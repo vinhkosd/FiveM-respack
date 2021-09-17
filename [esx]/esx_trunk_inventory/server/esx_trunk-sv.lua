@@ -47,8 +47,8 @@ function getItemWeight(item)
   local itemWeight = 0
   if item ~= nil then
     itemWeight = Config.DefaultWeight
-    if arrayWeight[item] ~= nil then
-      itemWeight = arrayWeight[item]
+    if ESX.Items[item] ~= nil then
+      itemWeight = ESX.Items[item].weight
     end
   end
   return itemWeight
@@ -61,8 +61,8 @@ function getInventoryWeight(inventory)
     for i = 1, #inventory, 1 do
       if inventory[i] ~= nil then
         itemWeight = Config.DefaultWeight
-        if arrayWeight[inventory[i].name] ~= nil then
-          itemWeight = arrayWeight[inventory[i].name]
+        if ESX.Items[inventory[i].name] ~= nil then
+          itemWeight = ESX.Items[inventory[i].name].weight
         end
         weight = weight + (itemWeight * (inventory[i].count or 1))
       end

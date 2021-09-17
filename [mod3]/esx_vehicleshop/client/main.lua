@@ -954,11 +954,11 @@ Citizen.CreateThread(function()
 				if CurrentAction == 'shop_menu' then
 					if Config.LicenseEnable then
 						ESX.TriggerServerCallback('esx_license:checkLicense', function(hasDriversLicense)
-							if hasDriversLicense then
+							-- if hasDriversLicense then
 								OpenShopMenu()
-							else
-								ESX.ShowNotification(_U('license_missing'))
-							end
+							-- else
+							-- 	ESX.ShowNotification(_U('license_missing'))
+							-- end
 						end, GetPlayerServerId(PlayerId()), 'drive')
 					else
 						OpenShopMenu()

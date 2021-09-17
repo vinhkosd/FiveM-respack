@@ -40,8 +40,8 @@ function getItemyWeight(item)
   local itemWeight = 0
   if item ~= nil then
     itemWeight = Config.DefaultWeight
-    if arrayWeight[item] ~= nil then
-      itemWeight = arrayWeight[item]
+    if ESX.Items[item] ~= nil then
+      itemWeight = ESX.Items[item].weight
     end
   end
   return itemWeight

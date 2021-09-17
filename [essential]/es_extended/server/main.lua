@@ -352,7 +352,6 @@ AddEventHandler('esx:giveInventoryItem', function(target, type, itemName, itemCo
 		end
 
 	elseif type == 'item_account' then
-
 		if itemCount > 0 and sourceXPlayer.getAccount(itemName).money >= itemCount then
 			sourceXPlayer.removeAccountMoney(itemName, itemCount)
 			targetXPlayer.addAccountMoney   (itemName, itemCount)

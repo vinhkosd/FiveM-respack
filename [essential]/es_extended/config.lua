@@ -13,4 +13,4 @@ Config.PaycheckInterval     = 7 * 60000
 Config.MaxPlayers           = GetConvarInt('sv_maxclients', 255) -- set this value to 255 if you're running OneSync
 
 Config.EnableDebug          = false
-Config.MaxWeight            = 24
+Config.MaxWeight            = 80000

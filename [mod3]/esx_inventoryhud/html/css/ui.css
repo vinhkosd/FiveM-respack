@@ -1,15 +1,16 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Signika', sans-serif;
-    /*text-transform: uppercase;*/
-    color: white;
-    text-shadow:
+    font-family: 'Roboto', sans-serif;
+    src: url('roboto.ttf');
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      text-shadow:
         -0.5px -0.5px 0 #000,
         0.5px -0.5px 0 #000,
         -0.5px 0.5px 0 #000,
         0.5px 0.5px 0 #000;
-
 }
 
 .ui {
@@ -179,12 +180,12 @@ input[type=number] {
 .info-div {
     text-align: center;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.01);
-    width: 15%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 80%;
     position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    top: 5%;
+	text-transform: none;
 }
 
 .info-div2 {
@@ -343,6 +344,11 @@ input[type=number] {
     #noSecondInventoryMessage {
         width: 540px;
     }
+
+    .weight-div {
+        margin-left: 390px;
+		width: 120px;
+	}
 }
 
 @media (max-width: 1300px) {
@@ -365,4 +371,22 @@ input[type=number] {
     #noSecondInventoryMessage {
         width: 420px;
     }
+    .weight-div {
+        margin-left: 390px;
+		width: 120px;
+	}
+}
+
+.weight-div {
+    width: 120%;
+    height: 70%;
+    position: absolute;
+    left: 70px;
+    top: -13px;
+/*     transition: 0.2s; */
+    text-align: left;
+    vertical-align: left;
+    font-size: 16px;
+    line-height: 40px;
+    float: left;
 }

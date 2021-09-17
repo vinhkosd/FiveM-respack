@@ -111,28 +111,50 @@ RegisterCommand("aaaa", function()
 	SetNuiFocus(false, false)
 end)
 
+function respawnPed(ped,coords)
+
+	SetEntityCoordsNoOffset(ped, coords.x, coords.y, coords.z, false, false, false, true)
+	NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0.0, true, false) 
+
+    local formattedCoords = {
+        x = ESX.Math.Round(coords.x, 1),
+        y = ESX.Math.Round(coords.y, 1),
+        z = ESX.Math.Round(coords.z, 1)
+    }
+
+    ESX.SetPlayerData('lastPosition', formattedCoords)
+
+	SetPlayerInvincible(ped, false) 
+    StopScreenEffect('DeathFailOut')
+    DoScreenFadeIn(800)
+	TriggerEvent('playerSpawned', coords.x, coords.y, coords.z, 0.0)
+	ClearPedBloodDamage(ped)
+end
+
 RegisterCommand("hoisinh", function()
 	SetNuiFocus(false, false)
-    TriggerServerEvent("sawu_hookers:countAmbulance", function(MedsConnected)
-        if MedsConnected == 0 then
-            TriggerEvent("pNotify:SendNotification",{
-                text = "<b style='color:#1E90FF'>Không thể hồi sinh khi có bác sĩ online</b>",
-                type = "error",
-                timeout = (3000),
-                layout = "bottomcenter",
-                queue = "global"
-            })
-        else
-            TriggerEvent("pNotify:SendNotification",{
-                text = "<b style='color:#1E90FF'>Không thể hồi sinh khi có bác sĩ offline</b>",
-                type = "error",
-                timeout = (3000),
-                layout = "bottomcenter",
-                queue = "global"
-            })
+    ESX.TriggerServerCallback("sawu_hookers:countAmbulance", function(message)
+        if message == "revive" then
+            local ped = GetPlayerPed(-1)
+            if (IsEntityDead(ped)) then
+                local playerCoords = GetEntityCoords(ped)
+                respawnPed(ped, playerCoords)
+                
+                -- TriggerClientEvent('esx_ambulancejob:revive', ped)
+            end
+            return
         end
+        
+        TriggerEvent("pNotify:SendNotification",{
+            text = "<b style='color:#1E90FF'>"..message.."</b>",
+            type = "error",
+            timeout = (3000),
+            layout = "bottomcenter",
+            queue = "global"
+        })
     end)
 end)
+
 -------------------------------------------------------------
 
 -------------------------------------------------------------

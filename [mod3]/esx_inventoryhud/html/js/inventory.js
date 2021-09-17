@@ -39,6 +39,7 @@ window.addEventListener("message", function (event) {
     } else if (event.data.action == "setItems") {
         inventorySetup(event.data.itemList,event.data.fastItems);
         $(".info-div2").html(event.data.text);
+        $(".weight-div").html(event.data.weight);
 
         $('.item').draggable({
             helper: 'clone',

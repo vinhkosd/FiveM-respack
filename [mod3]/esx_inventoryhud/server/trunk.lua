@@ -43,8 +43,8 @@ function getItemWeight(item)
   local itemWeight = 0
   if item ~= nil then
     itemWeight = Config.DefaultWeight
-    if arrayWeight[item] ~= nil then
-      itemWeight = arrayWeight[item]
+    if ESX.Items[item] ~= nil then
+      itemWeight = ESX.Items[item].weight
     end
   end
   return itemWeight
@@ -57,8 +57,8 @@ function getInventoryWeight(inventory)
     for i = 1, #inventory, 1 do
       if inventory[i] ~= nil then
         itemWeight = Config.DefaultWeight
-        if arrayWeight[inventory[i].name] ~= nil then
-          itemWeight = arrayWeight[inventory[i].name]
+        if ESX.Items[inventory[i].name] ~= nil then
+          itemWeight = ESX.Items[inventory[i].name].weight
         end
         weight = weight + (itemWeight * (inventory[i].count or 1))
       end
@@ -461,4 +461,27 @@ end
 
 AddEventHandler("esx_trunk:getSharedDataStore", function(plate, cb)
     cb(GetSharedDataStore(plate))
+end)
+
+ESX.RegisterServerCallback('esx_inventoryhud:checkOwner',function(source,cb, plate)
+  local _source = source
+  local identifier = GetPlayerIdentifiers(_source)[1]
+  local vehplate = ESX.Math.Trim(plate)
+  local result = MySQL.Sync.fetchAll("SELECT * FROM owned_vehicles where plate=@plate and owner=@identifier",{['@plate'] = vehplate, ['@identifier'] = identifier});
+  while result == nil do
+    Wait(5)
+  end
+  if #result ~= 0 then
+    cb(true)
+  else
+    cb(false)
+  end
+  -- , function(result)
+  --   print(result[1])
+  --   if result[1] ~= nil then--chủ xe
+  --     cb(true)
+  --   else
+  --     cb(false)
+  --   end
+  -- end)
 end)

@@ -15,7 +15,7 @@ AddEventHandler('engine',function()
 	if controlsave_bool == true then
 			vehicle = saveVehicle
 		else
-			ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
+			-- ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
 			return
 		end
 		
@@ -41,7 +41,7 @@ AddEventHandler('engineoff',function()
         if (IsPedSittingInAnyVehicle(player)) then 
             local vehicle = GetVehiclePedIsIn(player,false)
 			engineoff = true
-			ShowNotification("Engine ~r~off~s~.")
+			-- ShowNotification("Engine ~r~off~s~.")
 			while (engineoff) do
 			SetVehicleEngineOn(vehicle,false,false,false)
 			SetVehicleUndriveable(vehicle,true)
@@ -55,7 +55,7 @@ AddEventHandler('engineon',function()
 		if controlsave_bool == true then
 			vehicle = saveVehicle
 		else
-			ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
+			-- ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
 			return
 		end
         if (IsPedSittingInAnyVehicle(player)) then 
@@ -63,7 +63,7 @@ AddEventHandler('engineon',function()
 			engineoff = false
 			SetVehicleUndriveable(vehicle,false)
 			SetVehicleEngineOn(vehicle,true,false,false)
-			ShowNotification("Engine ~g~on~s~.")
+			-- ShowNotification("Engine ~g~on~s~.")
 	end
 end)
 -- T R U N K --
@@ -73,7 +73,7 @@ AddEventHandler('trunk',function()
 		if controlsave_bool == true then
 			vehicle = saveVehicle
 		else
-			ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
+			-- ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
 			return
 		end
 			
@@ -87,7 +87,7 @@ AddEventHandler('trunk',function()
 				SetVehicleDoorShut(vehicle,5,0)
 				end
 			else
-				ShowNotification("~r~You must be near your vehicle to do that.")
+				-- ShowNotification("~r~You must be near your vehicle to do that.")
 			end
 end)
 -- R E A R  D O O R S --
@@ -97,7 +97,7 @@ AddEventHandler('rdoors',function()
     	if controlsave_bool == true then
 			vehicle = saveVehicle
 		else
-			ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
+			-- ShowNotification("Bạn chưa lưu phương tiện, lên phương tiện và nhấn /save")
 			return
 		end
 			local isopen = GetVehicleDoorAngleRatio(vehicle,2) and GetVehicleDoorAngleRatio(vehicle,3)
@@ -116,7 +116,7 @@ AddEventHandler('rdoors',function()
 				SetVehicleDoorShut(vehicle,3,0)
 				end
 			else
-				ShowNotification("~r~You must be near your vehicle to do that.")
+				-- ShowNotification("~r~You must be near your vehicle to do that.")
 			end
 end)		
 
@@ -127,7 +127,7 @@ AddEventHandler('hood',function()
     	if controlsave_bool == true then
 			vehicle = saveVehicle
 		else
-			ShowNotification("Bạn chưa lưu phương tiện")
+			-- ShowNotification("Bạn chưa lưu phương tiện")
 			return
 		end
 			
@@ -141,7 +141,7 @@ AddEventHandler('hood',function()
 				SetVehicleDoorShut(vehicle,4,0)
 				end
 			else
-				ShowNotification("~r~You must be near your vehicle to do that.")
+				-- ShowNotification("~r~You must be near your vehicle to do that.")
 			end
 end)
 -- L O C K --
@@ -169,22 +169,22 @@ AddEventHandler('lock',function()
 			--if distanceToVeh <= lockDistance then
 				if (islocked == 1)then
 				SetVehicleDoorsLocked(vehicle, 2)
-				ShowNotification("You have locked your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~.")
+				-- ShowNotification("You have locked your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~.")
 				TriggerEvent('lockLights')
 				else
 				SetVehicleDoorsLocked(vehicle,1)
-				ShowNotification("You have unlocked your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~.")
+				-- ShowNotification("You have unlocked your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~.")
 				TriggerEvent('lockLights')
 				end
 			--else
-				--ShowNotification("~r~You must be near your vehicle to do that.")
+				-- ShowNotification("~r~You must be near your vehicle to do that.")
 			--end
 		else
-			ShowNotification("~r~No saved vehicle.")
+			-- ShowNotification("~r~No saved vehicle.")
 		end
 	end)
 
-function ShowNotification( text )
+function -- ShowNotification( text )
     SetNotificationTextEntry( "STRING" )
     AddTextComponentString( text )
     DrawNotification( false, false )
@@ -198,7 +198,7 @@ AddEventHandler('save',function()
 			--remove from saved.
 			saveVehicle = nil
 			RemoveBlip(targetBlip)
-			ShowNotification("Saved vehicle ~r~removed~w~.")
+			-- ShowNotification("Saved vehicle ~r~removed~w~.")
 			saved = false
 		else
 			RemoveBlip(targetBlip)
@@ -206,7 +206,7 @@ AddEventHandler('save',function()
 			local vehicle = saveVehicle
 			targetBlip = AddBlipForEntity(vehicle)
 			SetBlipSprite(targetBlip,225)
-			ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
+			-- ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
 			saved = true
 		end
 	end
@@ -217,14 +217,14 @@ AddEventHandler('controlsave',function(vehicle)
 			controlsave_bool = true
 			if saveVehicle == nil then
 				saveVehicle = vehicle
-				ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
+				-- ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
 				RemoveBlip(targetBlip)
 				targetBlip = AddBlipForEntity(vehicle)
 				SetBlipSprite(targetBlip,225)
 			else
-				ShowNotification("You are no longer controlling your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(saveVehicle))))
+				-- ShowNotification("You are no longer controlling your ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(saveVehicle))))
 				saveVehicle = vehicle
-				ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
+				-- ShowNotification("This ~y~" .. GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))) .. "~w~ is now your~g~ saved ~w~vehicle.")
 				RemoveBlip(targetBlip)
 				targetBlip = AddBlipForEntity(vehicle)
 				SetBlipSprite(targetBlip,225)

@@ -75,26 +75,26 @@ ESX.RegisterServerCallback('sawu_hookers:countAmbulance', function(src, cb)
 
     if MedsConnected == 0 then
         local xTarget = ESX.GetPlayerFromId(source)
-        local diedTime = lastRevives[xTarget]
+        -- local diedTime = lastRevives[xTarget]
         
-        if diedTime ~= nil then
-            local waitPeriod = diedTime + (60 * 1000)
-            if(GetGameTimer() < waitPeriod)then
-                local seconds = math.ceil((waitPeriod - GetGameTimer()) / 1000)
-                local message = ""
-                if(seconds > 60)then
-                    local minutes = math.floor((seconds / 60))
-                    seconds = math.ceil(seconds-(minutes*60))
-                end
-                message = "Bạn đã hồi sinh trước đó. Vui lòng chờ "..seconds.." giây"
-            else
-                --set last died time
-                lastRevives[xTarget] = GetGameTimer()
-            end
-        else
-            --set lastdiedtime
-            lastRevives[xTarget] = GetGameTimer()
-        end
+        -- if diedTime ~= nil then
+        --     local waitPeriod = diedTime + (60 * 1000)
+        --     if(GetGameTimer() < waitPeriod)then
+        --         local seconds = math.ceil((waitPeriod - GetGameTimer()) / 1000)
+        --         local message = ""
+        --         if(seconds > 60)then
+        --             local minutes = math.floor((seconds / 60))
+        --             seconds = math.ceil(seconds-(minutes*60))
+        --         end
+        --         message = "Bạn đã hồi sinh trước đó. Vui lòng chờ "..seconds.." giây"
+        --     else
+        --         --set last died time
+        --         lastRevives[xTarget] = GetGameTimer()
+        --     end
+        -- else
+        --     --set lastdiedtime
+        --     lastRevives[xTarget] = GetGameTimer()
+        -- end
         message = "revive"
     else
         message = "Không thể hồi sinh khi có bác sĩ online"

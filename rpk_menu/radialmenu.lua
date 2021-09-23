@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
                 id = "Khóa Xe",
                 icon = "#RemoteCar",
                 title = "Khóa Xe",
-                functionName = "rpk_carlock:carlock"
+                functionName = "lock"
             },
             {
                 id = "Menu Xe",

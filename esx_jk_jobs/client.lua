@@ -24,7 +24,7 @@ Citizen.CreateThread(function ()
 		Citizen.Wait(0)
 		DrawMarker(Config.Marker.type, Config.Marker.x, Config.Marker.y, Config.Marker.z, 0, 0, 0, 0, 0, 0, 2.0001,2.0001,2.0001, 0, Config.Color.r, Config.Color.g, Config.Color.b, 0, 0, 0, 0, 0, 0, 0)
 		if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)),  -265.0,-963.6,31.22313117981, true) < 1 then
-			DisplayHelpText("Nhan ~g~E~s~ Mo bang nghe")
+			DisplayHelpText("Nhấn ~g~E~s~ để xin việc")
 		 if (IsControlJustReleased(1, 51)) then
 			SetNuiFocus( true, true )
 			SendNUIMessage({
@@ -122,7 +122,8 @@ Citizen.CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentSubstringPlayerName(_U('job_center'))
+		-- AddTextComponentSubstringPlayerName("Trung tâm xin việc")
+		AddTextComponentString("Trung tâm xin việc")
 		EndTextCommandSetBlipName(blip)
 	end
 end)

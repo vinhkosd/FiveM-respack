@@ -1,9 +1,9 @@
 Locales['en'] = {
-  ['valid_purchase'] = 'xac thuc giao dich nay?',
-  ['no'] = 'khong',
-  ['yes'] = 'dung',
-  ['not_enough_money'] = 'ban khong du tien de tri lieu',
-  ['you_paid'] = 'ban da tra $%s',
-  ['press_access'] = 'nhan ~INPUT_CONTEXT~ de dieu tri ~r~(~h~~g~$2000~r~)',
+  ['valid_purchase'] = 'Xác thực giao dịch?',
+  ['no'] = 'Huỷ bỏ',
+  ['yes'] = 'Đồng ý',
+  ['not_enough_money'] = 'Bạn không đủ tiền',
+  ['you_paid'] = 'bạn đã trả $%s',
+  ['press_access'] = 'nhấn ~INPUT_CONTEXT~ để điều trị ~r~(~h~~g~$2000~r~)',
   ['blip_hospital'] = 'Medic',
 }

@@ -65,7 +65,8 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 							usable = ESX.UsableItemsCallbacks[inventory[i].item] ~= nil,
 							rare = item.rare,
 							weight = item.weight,
-							canRemove = item.canRemove
+							canRemove = item.canRemove,
+							information = inventory[i].information
 						})
 					else
 						print(('es_extended: invalid item "%s" ignored!'):format(inventory[i].item))

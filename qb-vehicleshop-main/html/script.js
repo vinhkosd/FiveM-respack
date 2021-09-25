@@ -30,7 +30,6 @@ window.addEventListener('message', function(event) {
                 dataVehicles.push(v);          
             }             
         }
-        console.log(JSON.stringify(dataVehicles))
         Dealership.Open(dataVehicles);
 
       //  document.getElementById("playerName").innerHTML = data.playerName;        
@@ -86,7 +85,6 @@ window.addEventListener('message', function(event) {
 
     if (event.data.type == "updateVehicleInfos") {
         var data = event.data;
-        console.log(data)
         handlingVehicle = data.data;
         
         vehicleSelected.sale = vehicleSelected.sale*1000
@@ -326,10 +324,6 @@ $(document).on('mousedown', ".item-cars", function(event){
                 $('#colorPicker').css("display","flex");
                 
                 var dataCar = $(event.currentTarget).find('.specification').find('span');
-                console.log(dataCar[0].outerText);
-                console.log(dataCar[0]);
-                console.log(dataCar[1].outerText);
-                console.log(dataCar[1]);
                 //var scroll =  $(event.currentTarget).position();
 
                 //if(scroll.left > 500) {

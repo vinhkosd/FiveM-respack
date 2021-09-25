@@ -271,7 +271,7 @@ AddEventHandler('qb-vehicleshop.spawnVehicle', function(model, plate)
         end
     end
     
-    local vehicleBuy = CreateVehicle(hash, -11.87, -1080.87, 25.71, 132.0, 1, 1)
+    local vehicleBuy = CreateVehicle(hash, -64.28, -1079.64, 27.04, 132.0, 1, 1)
     SetPedIntoVehicle(PlayerPedId(), vehicleBuy, -1)
     SetVehicleNumberPlateText(vehicleBuy, plate)
     TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(vehicleBuy))

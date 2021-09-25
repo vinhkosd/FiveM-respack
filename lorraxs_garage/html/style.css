@@ -208,7 +208,7 @@ h2 {
 }
 
 .button:hover {
-  background-color: #e22c2c;
+  background-color: #292323;
   color: white;
 }
 
@@ -223,9 +223,9 @@ h2 {
 
 .button {
   border : 0;
-  background: #0ecf72;
+  background: #101111;
   border: 2px solid #ff30b000;
-  border-radius: 15px;
+  border-radius: 6px;
   color: white;
   padding: 0.260vw 0.521vw;
   outline: none;

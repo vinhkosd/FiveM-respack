@@ -1,1 +1,165 @@
-﻿var _0x3c97=['</span></h5>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h5\x20class\x20=\x20\x22h4\x22>Động\x20cơ:\x20','%\x09\x20Thân\x20xe:\x20','%</h5>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style\x20=\x20\x22\x20margin-top:\x203.704vh\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22buybutton\x22\x20number\x20=\x20','\x20style\x20=\x20\x22style=\x20width:\x2070px\x22>\x20Lấy\x20xe</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22changename\x22\x20number\x20=\x20','\x20style\x20=\x20\x22style=\x20\x20width:\x2070px\x22>\x20Đổi\x20Tên</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>','<div\x20class\x20=\x20\x22image\x22\x20id\x20=\x20','\x20KindOfVehicle\x20=\x20','>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src=','</h3>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h4\x20class\x20=\x20\x22h4\x22\x20style\x20=\x20\x22color\x20:\x20#ed1325;\x22>🚧\x20Ngoài\x20Garage</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h5\x20class\x20=\x20\x22h4\x22>💳\x20Biển\x20Số:\x20<span\x20style=\x22color:\x20#03adfc\x22>','\x20style=\x27height:\x2080%;\x20width:\x2080%;\x20object-fit:\x20contain\x27/>\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h3\x20class\x20=\x20\x22h4\x22>🚘\x20','</h3>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4\x20class\x20=\x20\x22h4\x22\x20style\x20=\x20\x22color\x20:\x20#42f54b;\x22>🚧\x20Trong\x20Garage</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h5\x20class\x20=\x20\x22h4\x22>💳\x20Biển\x20Số:\x20<span\x20style=\x22color:\x20#03adfc\x22>','</span></h5>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h5\x20class\x20=\x20\x22h4\x22>Động\x20cơ:\x20','%</h5>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style\x20=\x20\x22\x20margin-top:\x203.704vh\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22buybutton\x22\x20number\x20=\x20','\x20style\x20=\x20\x22style=\x20width:\x2070px\x22>\x20Lấy\x20xe</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22changename\x22\x20number\x20=\x20','\x20style\x20=\x20\x22style=\x20\x20width:\x2070px\x22>\x20Đổi\x20Tên</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>','>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src=','\x20style\x20=\x20\x22style=\x20width:\x203.646vw\x22>\x20Lấy\x20xe</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22changename\x22\x20number\x20=\x20','\x20style\x20=\x20\x22style=\x20\x20width:\x203.646vw\x22>\x20Đổi\x20Tên</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>','\x20<h6\x20class\x20=\x20\x22h4\x22\x20style\x20=\x20\x22right:\x2047.125%;\x20position:\x20absolute;\x22\x20bottom\x20=\x20','owner','\x0a\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22bossactions\x22\x20style\x20=\x20\x22position:\x20absolute;\x20right:\x2015px;\x20top:\x205px;\x22>Boss\x20actions</button>\x0a\x09\x09\x09\x09\x09','body','click','#changename','attr','number','post','stringify','#buybutton','Heading','log','returnVehicle','http://lorraxs_garage/escape','reload','hide','http://lorraxs_garage/notify','Xe\x20của\x20bạn\x20đã\x20mất','#bossactions','http://lorraxs_garage/bossactions','http://lorraxs_garage/emptycart','#payment','#cart','which','addEventListener','message','shop','show','fast','data','length','result','pos','getVehicle','floor','engineHealth','bodyHealth','https://i.imgur.com/qpAX4Bo.png','state','vehicleType','#wrapper','append','vehicle','\x20label\x20=\x20','\x20plate\x20=\x20','plate','\x20state\x20=\x20','\x20garage\x20=\x20','garage','KindOfVehicle','>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src=\x20','\x20style=\x27height:\x2080%;\x20width:\x2080%;\x20object-fit:\x20contain\x27/>\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h3\x20class\x20=\x20\x22h4\x22>🚘\x20','name','</h3>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h4\x20class\x20=\x20\x22h4\x22\x20style\x20=\x20\x22color\x20:\x20#42f54b;\x22>🚧\x20Trong\x20Garage</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h5\x20class\x20=\x20\x22h4\x22>💳\x20Biển\x20Số:\x20<span\x20style=\x22color:\x20#03adfc\x22>'];(function(_0x45b665,_0x41b0d2){var _0x4fcf7f=function(_0x503250){while(--_0x503250){_0x45b665['push'](_0x45b665['shift']());}};_0x4fcf7f(++_0x41b0d2);}(_0x3c97,0x74));var _0x939b=function(_0x45b665,_0x41b0d2){_0x45b665=_0x45b665-0x0;var _0x4fcf7f=_0x3c97[_0x45b665];return _0x4fcf7f;};$(function(){window[_0x939b('0x0')](_0x939b('0x1'),function(_0x2b6fcb){if(_0x2b6fcb['data']['type']==_0x939b('0x2')){$('#wrapper')[_0x939b('0x3')](_0x939b('0x4'));var _0x4a420e;var _0x40d75a=0x2ee;if(_0x2b6fcb[_0x939b('0x5')]['result'][_0x939b('0x6')]>0xa){for(_0x4a420e=0x0;_0x4a420e<(_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x939b('0x6')]-0xa)/0x5;_0x4a420e++){_0x40d75a=_0x40d75a+0x177;}}var _0x25004d;if(_0x2b6fcb[_0x939b('0x5')][_0x939b('0x8')]==_0x939b('0x9')){for(_0x25004d=0x0;_0x25004d<_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x939b('0x6')];_0x25004d++){var _0x483ea0=Math[_0x939b('0xa')](_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0xb')]/0x3e8*0x64);var _0xc19d8a=Math[_0x939b('0xa')](_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0xc')]/0x3e8*0x64);var _0x3d3b3e=_0x939b('0xd');var _0x1d7834=_0x939b('0xd');if(_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0xe')]=='1'){if(_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0xf')]=='8'){$(_0x939b('0x10'))[_0x939b('0x11')]('<div\x20class\x20=\x20\x22image\x22\x20id\x20=\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x12')]+_0x939b('0x13')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['name']+_0x939b('0x14')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x15')]+_0x939b('0x16')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0xe')]+_0x939b('0x17')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x18')]+'\x20KindOfVehicle\x20=\x20'+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x19')]+_0x939b('0x1a')+_0x1d7834+_0x939b('0x1b')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x1d')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x15')]+_0x939b('0x1e')+_0x483ea0+_0x939b('0x1f')+_0xc19d8a+_0x939b('0x20')+_0x25004d+_0x939b('0x21')+_0x25004d+_0x939b('0x22'));}else{$(_0x939b('0x10'))['append'](_0x939b('0x23')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x12')]+'\x20label\x20=\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x14')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x15')]+'\x20state\x20=\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['state']+_0x939b('0x17')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x18')]+_0x939b('0x24')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x19')]+'>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src='+_0x3d3b3e+_0x939b('0x1b')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['name']+_0x939b('0x1d')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x15')]+_0x939b('0x1e')+_0x483ea0+'%\x09\x20Thân\x20xe:\x20'+_0xc19d8a+_0x939b('0x20')+_0x25004d+_0x939b('0x21')+_0x25004d+_0x939b('0x22'));}}else{if(_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0xf')]=='8'){$(_0x939b('0x10'))[_0x939b('0x11')](_0x939b('0x23')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['vehicle']+_0x939b('0x13')+_0x2b6fcb['data']['result'][_0x25004d][_0x939b('0x1c')]+'\x20plate\x20=\x20'+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x15')]+_0x939b('0x16')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0xe')]+_0x939b('0x17')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x18')]+_0x939b('0x24')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0x19')]+_0x939b('0x25')+_0x1d7834+'\x20style=\x27height:\x2080%;\x20width:\x2080%;\x20object-fit:\x20contain\x27/>\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<h3\x20class\x20=\x20\x22h4\x22>🚘\x20'+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d]['name']+_0x939b('0x26')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x15')]+_0x939b('0x1e')+_0x483ea0+_0x939b('0x1f')+_0xc19d8a+_0x939b('0x20')+_0x25004d+_0x939b('0x21')+_0x25004d+_0x939b('0x22'));}else{$(_0x939b('0x10'))[_0x939b('0x11')](_0x939b('0x23')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x12')]+_0x939b('0x13')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x14')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['plate']+_0x939b('0x16')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0xe')]+_0x939b('0x17')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x18')]+'\x20KindOfVehicle\x20=\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x19')]+_0x939b('0x25')+_0x3d3b3e+_0x939b('0x1b')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x1c')]+_0x939b('0x26')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d]['plate']+_0x939b('0x1e')+_0x483ea0+_0x939b('0x1f')+_0xc19d8a+_0x939b('0x20')+_0x25004d+'\x20style\x20=\x20\x22style=\x20width:\x2070px\x22>\x20Lấy\x20xe</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20class\x20=\x20\x22button\x22\x20id\x20=\x20\x22changename\x22\x20number\x20=\x20'+_0x25004d+_0x939b('0x22'));}}}}else{for(_0x25004d=0x0;_0x25004d<_0x2b6fcb[_0x939b('0x5')]['result'][_0x939b('0x6')];_0x25004d++){var _0x483ea0=Math[_0x939b('0xa')](_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0xb')]/0x3e8*0x64);var _0xc19d8a=Math[_0x939b('0xa')](_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0xc')]/0x3e8*0x64);var _0x3d3b3e=_0x939b('0xd');var _0x1d7834='https://i.imgur.com/qpAX4Bo.png';if(_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0xf')]=='8'){$(_0x939b('0x10'))[_0x939b('0x11')]('<div\x20class\x20=\x20\x22image\x22\x20id\x20=\x20'+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x12')]+_0x939b('0x13')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['name']+_0x939b('0x14')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x15')]+_0x939b('0x16')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d]['state']+'\x20garage\x20=\x20'+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0x18')]+_0x939b('0x24')+_0x2b6fcb['data']['result'][_0x25004d][_0x939b('0x19')]+'>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src='+_0x1d7834+_0x939b('0x27')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x28')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x15')]+_0x939b('0x29')+_0x483ea0+'%\x09\x20Thân\x20xe:\x20'+_0xc19d8a+_0x939b('0x2a')+_0x25004d+_0x939b('0x2b')+_0x25004d+_0x939b('0x2c'));}else{$(_0x939b('0x10'))[_0x939b('0x11')]('<div\x20class\x20=\x20\x22image\x22\x20id\x20=\x20'+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x12')]+_0x939b('0x13')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x14')+_0x2b6fcb['data'][_0x939b('0x7')][_0x25004d][_0x939b('0x15')]+_0x939b('0x16')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0xe')]+'\x20garage\x20=\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x18')]+_0x939b('0x24')+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x19')]+_0x939b('0x2d')+_0x3d3b3e+'\x20style=\x27height:\x2080%;\x20width:\x2080%;\x20object-fit:\x20contain\x27/>\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h3\x20class\x20=\x20\x22h4\x22>🚘\x20'+_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x25004d][_0x939b('0x1c')]+_0x939b('0x28')+_0x2b6fcb[_0x939b('0x5')]['result'][_0x25004d][_0x939b('0x15')]+_0x939b('0x29')+_0x483ea0+_0x939b('0x1f')+_0xc19d8a+_0x939b('0x2a')+_0x25004d+_0x939b('0x2e')+_0x25004d+_0x939b('0x2f'));}}}$(_0x939b('0x10'))['append'](_0x939b('0x30')+(_0x40d75a-0x5)+'></h6>');if(_0x2b6fcb['data'][_0x939b('0x31')]==!![]){$(_0x939b('0x10'))[_0x939b('0x11')](_0x939b('0x32'));}var _0x1eb266;$(_0x939b('0x33'))['on'](_0x939b('0x34'),_0x939b('0x35'),function(){var _0x2fd5d8=$(this)[_0x939b('0x36')](_0x939b('0x37'));var _0x3ee980=_0x2b6fcb['data'][_0x939b('0x7')][_0x2fd5d8][_0x939b('0x15')];$[_0x939b('0x38')]('http://lorraxs_garage/changeName',JSON[_0x939b('0x39')]({'plate':_0x3ee980}));location['reload'](!![]);$(_0x939b('0x10'))['hide'](_0x939b('0x4'));});$(_0x939b('0x33'))['on'](_0x939b('0x34'),_0x939b('0x3a'),function(){var _0x4afe08=$(this)[_0x939b('0x36')](_0x939b('0x37'));var _0x84275e=_0x2b6fcb['data'][_0x939b('0x7')][_0x4afe08]['vehicle'];var _0x56ab19=_0x2b6fcb['data'][_0x939b('0x7')][_0x4afe08]['x'];var _0x1e953e=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08]['y'];var _0x8e06fa=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08]['z'];var _0x12c81e=_0x2b6fcb['data'][_0x939b('0x7')][_0x4afe08][_0x939b('0x3b')];var _0xde8910=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08]['KindOfVehicle'];var _0xcd0cd0=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08][_0x939b('0xe')];var _0x354092=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08]['engineHealth'];var _0x559def=_0x2b6fcb[_0x939b('0x5')][_0x939b('0x7')][_0x4afe08]['bodyHealth'];console[_0x939b('0x3c')](_0x354092);console['log'](_0x559def);if(_0xcd0cd0=='1'||_0x2b6fcb[_0x939b('0x5')]['pos']==_0x939b('0x3d')){$[_0x939b('0x38')]('http://lorraxs_garage/spawnVehicle',JSON['stringify']({'vehicle':_0x84275e,'x':_0x56ab19,'y':_0x1e953e,'z':_0x8e06fa,'Heading':_0x12c81e,'KindOfVehicle':_0xde8910,'engineHealth':_0x354092,'bodyHealth':_0x559def}));$[_0x939b('0x38')](_0x939b('0x3e'),JSON[_0x939b('0x39')]({}));location[_0x939b('0x3f')](!![]);$(_0x939b('0x10'))[_0x939b('0x40')](_0x939b('0x4'));}else{$[_0x939b('0x38')](_0x939b('0x41'),JSON[_0x939b('0x39')]({'msg':_0x939b('0x42')}));}});$(_0x939b('0x33'))['on'](_0x939b('0x34'),_0x939b('0x43'),function(){$[_0x939b('0x38')](_0x939b('0x44'),JSON['stringify']({}));$[_0x939b('0x38')]('http://lorraxs_garage/escape',JSON[_0x939b('0x39')]({}));location[_0x939b('0x3f')](!![]);$[_0x939b('0x38')](_0x939b('0x45'),JSON['stringify']({}));$(_0x939b('0x10'))[_0x939b('0x40')](_0x939b('0x4'));$(_0x939b('0x46'))[_0x939b('0x40')](_0x939b('0x4'));$(_0x939b('0x47'))[_0x939b('0x40')]('fast');});}});document['onkeyup']=function(_0x12768a){if(_0x12768a[_0x939b('0x48')]==0x1b){$['post'](_0x939b('0x3e'),JSON['stringify']({}));location[_0x939b('0x3f')](!![]);$[_0x939b('0x38')](_0x939b('0x45'),JSON[_0x939b('0x39')]({}));$(_0x939b('0x10'))[_0x939b('0x40')](_0x939b('0x4'));$(_0x939b('0x46'))['hide'](_0x939b('0x4'));$('#cart')['hide'](_0x939b('0x4'));}};});
+﻿'use strict';
+$(document).ready(function () {
+    window.addEventListener("message", function(StateToContent) {
+        if (StateToContent.data.type == "shop") {
+            $("#wrapper").show("fast");
+
+            var paddingBottom = 750;
+            if (StateToContent.data.result.length > 10) {
+
+                for (var i = 0; i < (StateToContent.data.result.length - 10) / 5; i++) {
+
+                    paddingBottom = paddingBottom + 375;
+                }
+            }
+            if (StateToContent.data.pos == "getVehicle") {//lấy xe gara
+                for (var i = 0; i < StateToContent.data.result.length; i++) {
+
+                    var engineHealthPercent = Math.floor(StateToContent.data.result[i].engineHealth / 1E3 * 100);
+
+                    var bodyHealthPercent = Math.floor(StateToContent.data.result[i].bodyHealth / 1E3 * 100);
+
+                    if (StateToContent.data.result[i].state == "1") {//xe trong garage
+                        $("#wrapper").append(
+                            '<div class = "image" id = ' + StateToContent.data.result[i].vehicle + 
+                            " label = " + StateToContent.data.result[i].name + 
+                            " plate = " + StateToContent.data.result[i].plate + 
+                            " state = " + StateToContent.data.result[i].state + 
+                            " garage = " + StateToContent.data.result[i].garage + 
+                            " KindOfVehicle = " + StateToContent.data.result[i].KindOfVehicle +
+                            `>
+                            <h3 class = "h4">🚘 ` + StateToContent.data.result[i].name + 
+                            `</h3>
+                            <h4 class = "h4" style = "color : #42f54b;">🚧 Trong Garage</h4>
+                            
+                            <h5 class = "h4">💳 Biển Số: <span style="color: #03adfc">` + StateToContent.data.result[i].plate +
+                            `</span></h5><h5 class = "h4">Động cơ: ` + engineHealthPercent +
+                            "% Thân xe: " + bodyHealthPercent +
+                            `%</h5>
+                            <div style = " margin-top: 3.704vh">
+                            <button class = "button" id="buybutton" plate = "${StateToContent.data.result[i].plate}" number = ` + i + ` style = "style= width: 70px"> Lấy xe</button>
+                            
+                            <button class = "button" id = "changename" number = ` + i +` style = "style=  width: 70px"> Đổi Tên</button>
+                            
+                            </div>
+                            
+                            </div>`
+                        );
+                    } else {//xe ngoài garage
+                        $("#wrapper").append(
+                            '<div class = "image" id = ' + StateToContent.data.result[i].vehicle + 
+                            " label = " + StateToContent.data.result[i].name + 
+                            " plate = " + StateToContent.data.result[i].plate + 
+                            " state = " + StateToContent.data.result[i].state + 
+                            " garage = " + StateToContent.data.result[i].garage + 
+                            " KindOfVehicle = " + StateToContent.data.result[i].KindOfVehicle + 
+                            `>
+                            <h3 class = \"h4\">🚘 ` + StateToContent.data.result[i].name + `</h3>
+                            <h4 class = "h4" style = "color : #ed1325;">🚧 Ngoài Garage</h4>
+                            <h5 class = "h4">💳 Biển Số: <span style="color: #03adfc">` + StateToContent.data.result[i].plate + 
+                            `</span></h5>
+                            <h5 class = "h4">Động cơ: ` + engineHealthPercent + 
+                            "% Thân xe: " + bodyHealthPercent + `%</h5>
+                            <div style = " margin-top: 3.704vh">
+                            <button class = "button" id = "buybutton" plate = "${StateToContent.data.result[i].plate}" number = ` + i + ` style = "style= width: 70px"> Chuộc xe (${StateToContent.data.price}$)</button>  
+                            <button class = "button" id = "changename" number = ` + i + ` style = "style=  width: 70px"> Đổi Tên</button>
+                            </div>
+                            </div>`
+                        );
+                    }
+                }
+            } else {//chuộc xe gara
+                for (var i = 0; i < StateToContent.data.result.length; i++) {
+                    engineHealthPercent = Math.floor(StateToContent.data.result[i].engineHealth / 1E3 * 100);
+
+                    bodyHealthPercent = Math.floor(StateToContent.data.result[i].bodyHealth / 1E3 * 100);
+
+                    $("#wrapper").append(
+                        '<div class = "image" id = ' + StateToContent.data.result[i].vehicle + 
+                        " label = " + StateToContent.data.result[i].name + 
+                        " plate = " + StateToContent.data.result[i].plate + 
+                        " state = " + StateToContent.data.result[i].state + 
+                        " garage = " + StateToContent.data.result[i].garage + 
+                        " KindOfVehicle = " + StateToContent.data.result[i].KindOfVehicle + 
+                        `>
+                        <h3 class = \"h4\">🚘 ` + StateToContent.data.result[i].name + `</h3>
+                        <h4 class = "h4" style = "color : #42f54b;">🚧 Trong Garage</h4>
+                        <h5 class = "h4">💳 Biển Số: <span style="color: #03adfc">` + StateToContent.data.result[i].plate + `</span></h5>
+                        <h5 class = "h4">Động cơ: ` + engineHealthPercent + "% Thân xe: " + bodyHealthPercent + `%</h5>
+                        <div style = " margin-top: 3.704vh">
+                        <button class = "button" id = "buybutton" plate = "${StateToContent.data.result[i].plate}" number = ` + i + ` style = "style= width: 3.646vw">Chuộc xe</button>
+                        <button class = "button" id = "changename" number = ` + i + ` style = "style=  width: 3.646vw"> Đổi Tên</button>
+                        </div></div>`
+                    );
+                }
+            }
+            $("#wrapper").append(' <h6 class = "h4" style = "right: 47.125%; position: absolute;" bottom = ' + (paddingBottom - 5) + "></h6>");
+            if (StateToContent.data.owner == true) {
+                $("#wrapper").append(`<button class = "button" id = "bossactions" style = "position: absolute; right: 15px; top: 5px;">Boss actions</button>`);
+            }
+
+            $("body").on("click", "#changename", function() {
+                var last_fn = $(this).attr("number");
+                var plate = StateToContent.data.result[last_fn].plate;
+                $.post("http://lorraxs_garage/changeName", JSON.stringify({
+                    "plate": plate
+                }));
+                location.reload(true);
+                $("#wrapper").hide("fast");
+            });
+            $("body").on("click", "#buybutton", function() {
+                var i = $(this).attr("number");
+                var plate = $(this).attr("plate");
+                var vehicle = StateToContent.data.result[i].vehicle;
+                var audioOffsetX = StateToContent.data.result[i].x;
+                var nodeTly = StateToContent.data.result[i].y;
+                var v2Z = StateToContent.data.result[i].z;
+                var Heading = StateToContent.data.result[i].Heading;
+                var _0xde8910 = StateToContent.data.result[i].KindOfVehicle;
+                var volumeState = StateToContent.data.result[i].state;
+                var jiveUser = StateToContent.data.result[i].engineHealth;
+                var workerstats = StateToContent.data.result[i].bodyHealth;
+                // if (volumeState == "1" || StateToContent.data.pos == "returnVehicle") {
+                    $.post("http://lorraxs_garage/spawnVehicle", JSON.stringify({
+                        "vehicle": vehicle,
+                        "x": audioOffsetX,
+                        "y": nodeTly,
+                        "z": v2Z,
+                        "Heading": Heading,
+                        "KindOfVehicle": _0xde8910,
+                        "engineHealth": jiveUser,
+                        "bodyHealth": workerstats,
+                        "plate": plate
+                    }));
+                    $.post("http://lorraxs_garage/escape", JSON.stringify({}));
+                    location.reload(true);
+                    $("#wrapper").hide("fast");
+                // } else {
+                //     $.post("http://lorraxs_garage/notify", JSON.stringify({
+                //         "msg": "Xe của bạn đã mất"
+                //     }));
+                // }
+            });
+            $("body").on("click", "#bossactions", function() {
+                $.post("http://lorraxs_garage/bossactions", JSON.stringify({}));
+                $.post("http://lorraxs_garage/escape", JSON.stringify({}));
+                location.reload(true);
+                $.post("http://lorraxs_garage/emptycart", JSON.stringify({}));
+                $("#wrapper").hide("fast");
+                $("#payment").hide("fast");
+                $("#cart").hide("fast");
+            });
+        }
+    });
+
+    document.onkeyup = function(event) {
+        if (event.which == 27) {
+            $.post("http://lorraxs_garage/escape", JSON.stringify({}));
+            location.reload(true);
+            $.post("http://lorraxs_garage/emptycart", JSON.stringify({}));
+            $("#wrapper").hide("fast");
+            $("#payment").hide("fast");
+            $("#cart").hide("fast");
+        }
+    };
+});

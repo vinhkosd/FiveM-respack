@@ -77,14 +77,55 @@ function OpenMenuGarage(garage, KindOfVehicle)
 end
 
 RegisterNUICallback('spawnVehicle', function(data)
-    local KindOfVehicle = data.KindOfVehicle
-    local arrayGarage = {
-            SpawnPoint = {Pos = {x = data.x, y = data.y, z = data.z},Heading = data.Heading}
-    }
-    vehicle = json.decode(data.vehicle)
-    local dumped = ESX.DumpTable(vehicle)
-    print(dumped)
-    SpawnVehicle(vehicle, arrayGarage, KindOfVehicle, data.engineHealth, data.bodyHealth)
+	local plate = data.plate
+	ESX.TriggerServerCallback('lorraxs-garage:getVehicle', function(vehicle)
+		if vehicle ~= nil then
+			if vehicle.state == false or vehicle.state == 0 then -- xe nam ngoai garage
+				local vehicleOnMap = false
+				local vehicles = ESX.Game.GetVehicles()
+
+				for i=1, #vehicles, 1 do
+					local plateVeh = ESX.Math.Trim(GetVehicleNumberPlateText(vehicles[i]))
+					if plateVeh == plate then
+						vehicleOnMap = true
+					end
+				end
+
+				if vehicleOnMap == true then
+					ESX.ShowNotification('Xe của bạn đang ở trên map, không thể chuộc xe!')
+					return
+				end
+				ESX.TriggerServerCallback('eden_garage:checkMoney', function(result)
+					if result ~= true then
+						ESX.ShowNotification('Bạn không đủ tiền chuộc xe')
+						return
+					else
+						local vehicleProps = json.decode(vehicle.vehicle)
+						local KindOfVehicle = data.KindOfVehicle
+						local arrayGarage = {
+							SpawnPoint = {Pos = {x = data.x, y = data.y, z = data.z},Heading = data.Heading}
+						}
+						SpawnVehicle(vehicleProps, arrayGarage, KindOfVehicle, vehicleProps.engineHealth, vehicleProps.bodyHealth)
+					end
+				end)
+			else	-- xe nam trong garage
+				local vehicleProps = json.decode(vehicle.vehicle)
+				local KindOfVehicle = data.KindOfVehicle
+				local arrayGarage = {
+					SpawnPoint = {Pos = {x = data.x, y = data.y, z = data.z},Heading = data.Heading}
+				}
+				SpawnVehicle(vehicleProps, arrayGarage, KindOfVehicle, vehicleProps.engineHealth, vehicleProps.bodyHealth)
+			end
+		else
+			ESX.ShowNotification('Không tìm thấy phương tiện này')
+		end
+	end, plate)
+    -- local KindOfVehicle = data.KindOfVehicle
+    -- local arrayGarage = {
+    --         SpawnPoint = {Pos = {x = data.x, y = data.y, z = data.z},Heading = data.Heading}
+    -- }
+    -- vehicle = json.decode(data.vehicle)
+    -- SpawnVehicle(vehicle, arrayGarage, KindOfVehicle, data.engineHealth, data.bodyHealth)
 end)
 
 RegisterNUICallback('notify', function(data)
@@ -95,15 +136,12 @@ function ListVehiclesMenu(garage, KindOfVehicle)
 
     local curGarage = garage
     --local encodeGarage = json.encode(curGarage)
-    print(KindOfVehicle)
     local curKindOfVehicle = KindOfVehicle
     local elements = {}
     local vehicleName = ""
     local engineHealth, bodyHealth, fuelLevel, vehicleType
-    print('asdasdasdasd')
+
     ESX.TriggerServerCallback('eden_garage:getVehicles', function(vehicles)
-            --local dumped = ESX.DumpTable(vehicle)
-            --print(dumped)
             if not table.empty(vehicles) then
                     for _,v in pairs(vehicles) do
                             v.vehicle2 = json.decode(v.vehicle)
@@ -150,6 +188,7 @@ function ListVehiclesMenu(garage, KindOfVehicle)
                                     type = "shop",
                                     result = elements,
                                     pos = "getVehicle",
+                                    price = Config.Price,
                             })
             else
                     ESX.ShowNotification('Không có phương tiện nào trong gara')
@@ -217,15 +256,12 @@ function houseGarage(coords, KindOfVehicle)
 
     local curGarage = garage
     --local encodeGarage = json.encode(curGarage)
-    print(KindOfVehicle)
     local curKindOfVehicle = KindOfVehicle
     local elements = {}
     local vehicleName = ""
     local engineHealth, bodyHealth, fuelLevel, vehicleType
-    print('asdasdasdasd')
+
     ESX.TriggerServerCallback('eden_garage:getVehicles', function(vehicles)
-            --local dumped = ESX.DumpTable(vehicle)
-            --print(dumped)
             if not table.empty(vehicles) then
                     for _,v in pairs(vehicles) do
                             v.vehicle2 = json.decode(v.vehicle)
@@ -272,6 +308,7 @@ function houseGarage(coords, KindOfVehicle)
                                     type = "shop",
                                     result = elements,
                                     pos = "getVehicle",
+                                    price = Config.Price,
                             })
             else
                     ESX.ShowNotification('Không có phương tiện nào ')
@@ -415,7 +452,7 @@ function StockVehicleMenu(KindOfVehicle)
                             end,trailerProps, KindOfVehicle)
                     else
                             local vehicleProps = GetVehicleProperties(vehicle)
-                            exports['mythic_notify']:DoLongHudText('error', vehicleProps.plate)
+                        --     exports['mythic_notify']:DoLongHudText('error', vehicleProps.plate)
                             ESX.TriggerServerCallback('eden_garage:stockv',function(valid)
                                     if(valid) then
                                             for k,v in pairs (carInstance) do
@@ -486,7 +523,6 @@ function SpawnVehicle(vehicle, garage, KindOfVehicle, engineHealth, bodyHealth)
     local duped = ESX.DumpTable(garage)
     local dongco = engineHealth
     local thanxe = bodyHealth
-    print(garage.SpawnPoint.Heading)
     if ESX.Game.IsSpawnPointClear({ x = garage.SpawnPoint.Pos.x, y = garage.SpawnPoint.Pos.y, z = garage.SpawnPoint.Pos.z + 1}, 3.0) then
             ESX.Game.SpawnVehicle(vehicle.model, {
                     x = garage.SpawnPoint.Pos.x,
@@ -600,6 +636,7 @@ function ReturnVehicleMenu(garage, KindOfVehicle)
                                     type = "shop",
                                     pos = "returnVehicle",
                                     result = elements,
+                                    price = Config.Price,
                             })
             else
                     ESX.ShowNotification('Không có phương tiện nào của bạn')
@@ -656,38 +693,39 @@ RegisterNetEvent("ft_libs:OnClientReady")
 AddEventHandler('ft_libs:OnClientReady', function()
     for k,v in pairs (Config.Garages) do
             this_Garage = v
-            exports.ft_libs:AddArea("esx_eden_garage_area_"..k.."_garage", {
-                    marker = {
-                            weight = v.Marker.w,
-                            height = v.Marker.h,
-                            red = v.Marker.r,
-                            green = v.Marker.g,
-                            blue = v.Marker.b,
-                    },
-                    trigger = {
-                            weight = v.Marker.w,
-                            active = {
-                                    callback = function()
-                                            exports.ft_libs:HelpPromt(v.HelpPrompt)
-                                            if IsControlJustPressed(1, 38) and GetLastInputMethod(2) and (GetGameTimer() - GUI.Time) > 150 then
-                                                    v.Functionmenu(v, "personal")
-                                                    GUI.Time = GetGameTimer()
-                                            end
-                                    end,
-                            },
-                            exit = {
-                                    callback = exitmarker
-                            },
-                    },
-                    blip = {
-                            text = v.Name,
-                            colorId = Config.Blip.color,
-                            imageId = Config.Blip.sprite,
-                    },
-                    locations = {
-                            v.Pos
-                    },
-            })
+			-- turn off chuoc xe menu
+            -- exports.ft_libs:AddArea("esx_eden_garage_area_"..k.."_garage", {
+            --         marker = {
+            --                 weight = v.Marker.w,
+            --                 height = v.Marker.h,
+            --                 red = v.Marker.r,
+            --                 green = v.Marker.g,
+            --                 blue = v.Marker.b,
+            --         },
+            --         trigger = {
+            --                 weight = v.Marker.w,
+            --                 active = {
+            --                         callback = function()
+            --                                 exports.ft_libs:HelpPromt(v.HelpPrompt)
+            --                                 if IsControlJustPressed(1, 38) and GetLastInputMethod(2) and (GetGameTimer() - GUI.Time) > 150 then
+            --                                         v.Functionmenu(v, "personal")
+            --                                         GUI.Time = GetGameTimer()
+            --                                 end
+            --                         end,
+            --                 },
+            --                 exit = {
+            --                         callback = exitmarker
+            --                 },
+            --         },
+            --         blip = {
+            --                 text = v.Name,
+            --                 colorId = Config.Blip.color,
+            --                 imageId = Config.Blip.sprite,
+            --         },
+            --         locations = {
+            --                 v.Pos
+            --         },
+            -- })
             exports.ft_libs:AddArea("esx_eden_garage_area_"..k.."_spawnpoint", {
                     marker = {
                             weight = v.SpawnPoint.Marker.w,

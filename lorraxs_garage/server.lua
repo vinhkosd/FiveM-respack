@@ -135,11 +135,8 @@ ESX.RegisterServerCallback('eden_garage:getOutVehicles',function(source, cb, Kin
 end)
 
 ESX.RegisterServerCallback('lorraxs-garage:getVehicle', function(source, cb, plate)
-        print(plate)
         local _source = source
         MySQL.Async.fetchAll("SELECT * FROM owned_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data)
-                local dump = ESX.DumpTable(data)
-                print(dump)
                 cb(data[1])
         end)
 end)

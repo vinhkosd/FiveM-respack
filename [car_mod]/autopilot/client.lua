@@ -80,6 +80,15 @@ AddEventHandler("autopilot:stop", function(source)
   ClearPedTasks(PlayerPedId())
 end)
 
+RegisterNetEvent("autopilot:toggle")
+AddEventHandler("autopilot:toggle", function(source)
+  if autopilotActive then
+	TriggerEvent("autopilot:stop")
+  else
+	TriggerEvent("autopilot:start")
+  end
+end)
+
 
 
 function ShowNotification(text)

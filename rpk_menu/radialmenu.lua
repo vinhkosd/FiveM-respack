@@ -44,10 +44,10 @@ Citizen.CreateThread(function()
                 functionName = "vehcontrol:openExternal"
             },
             {
-                id = "Tài Xỉu",
-                icon = "#TaiXiu",
-                title = "Tài Xỉu",
-                functionName = "taixiu:mo"
+                id = "Tự lái",
+                icon = "#RemoteCar",
+                title = "Tự lái",
+                functionName = "autopilot:toggle"
             }
         }
         -- Loop through all menus in config

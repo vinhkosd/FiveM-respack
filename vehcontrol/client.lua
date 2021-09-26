@@ -4,6 +4,26 @@ local windowState2 = true
 local windowState3 = true
 local windowState4 = true
 
+ESX = nil
+
+Citizen.CreateThread(function()
+    while ESX == nil do
+            TriggerEvent('esx:getSharedObject', function(obj)
+            ESX = obj
+            end)
+    end
+end)
+
+Citizen.CreateThread(function()
+    local dict = "anim@mp_player_intmenu@key_fob@"
+    
+    RequestAnimDict(dict)
+    while not HasAnimDictLoaded(dict) do
+        Citizen.Wait(100)
+    end
+    local lock = false
+end)
+
 Citizen.CreateThread(function()
     while true do
 		Citizen.Wait(0)
@@ -372,4 +392,122 @@ function DisplayHelpText(str)
 	SetTextComponentFormat("STRING")
 	AddTextComponentString(str)
 	DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+end
+
+RegisterNetEvent('vehcontrol:lockDoor')
+AddEventHandler('vehcontrol:lockDoor', function()
+	print("lockDoor")
+	local vehicle = VehicleNearBy()
+	if DoesEntityExist(vehicle) then
+		print("co xe o gan")
+		local vehicleProps = GetVehicleProperties(vehicle)
+		local KindOfVehicle = "personal"
+		ESX.TriggerServerCallback('eden_garage:stockv',function(valid)
+				if(valid) then
+					local vehicleModel = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))
+					local msgType = "success"
+					local plateVeh = ESX.Math.Trim(GetVehicleNumberPlateText(vehicle))
+					local message = "Đã mở khóa xe "..vehicleModel..". Biển số : "..plateVeh.." ."
+					local islocked = GetVehicleDoorLockStatus(vehicle)
+					if (islocked == 1) then -- mo khoa thi khoa xe lai
+						msgType = "warning"
+						message = "Đã khóa xe "..vehicleModel..". Biển số : "..plateVeh.." ."
+						SetVehicleDoorsLocked(vehicle, 2)
+						SetVehicleDoorsLockedForPlayer(vehicle, PlayerId(), true)
+						SetVehicleDoorsLockedForAllPlayers(vehicle, true)
+					else -- dang khoa thi mo xe
+						SetVehicleDoorsLocked(vehicle,1)
+						SetVehicleDoorsLockedForPlayer(vehicle, PlayerId(), false)
+						SetVehicleDoorsLockedForAllPlayers(vehicle, false)
+					end
+
+					TriggerEvent("pNotify:SendNotification",{
+						text = "<b style='color:#1E90FF'>"..message.."</b>",
+						type = msgType,
+						timeout = (3000),
+						layout = "centerLeft",
+						queue = "global"
+					})
+
+					local dict = "anim@mp_player_intmenu@key_fob@" -- hieu ung cam remote
+    				RequestAnimDict(dict)
+					TaskPlayAnim(GetPlayerPed(-1), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
+					-- bat coi` xe & den`
+					StartVehicleHorn(vehicle, 100, 1, false) -- còi 100ms
+					SetVehicleLights(vehicle, 2) -- đèn sáng
+					Wait (200) -- delay 200ms
+					SetVehicleLights(vehicle, 0) -- đèn tắt
+					StartVehicleHorn(vehicle, 100, 1, false) -- còi 100ms
+					Wait (200) -- delay 200ms
+					SetVehicleLights(vehicle, 2) -- đèn sáng
+					Wait (400) -- delay 400ms
+					SetVehicleLights(vehicle, 0) -- đèn tắt
+				end
+		end,vehicleProps, KindOfVehicle)
+	else
+		TriggerEvent("pNotify:SendNotification",{
+            text = "<b style='color:#1E90FF'>Không có phương tiện nào ở gần</b>",
+            type = "error",
+            timeout = (3000),
+            layout = "centerLeft",
+            queue = "global"
+        })
+	end
+end)
+
+function VehicleNearBy() -- Xe o gan hoac xe dang lai
+	local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
+	local playerPed = GetPlayerPed(-1)
+	local vehicle = GetVehiclePedIsIn(playerPed, false)
+
+	if DoesEntityExist(vehicle) then
+		return vehicle
+	else
+		local closecar = GetClosestVehicle(x, y, z, 3.0, 0, 71)
+		return closecar
+	end
+	
+  end
+
+  GetVehicleProperties = function(vehicle)
+    if DoesEntityExist(vehicle) then
+        local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
+        vehicleProps["tyres"] = {}
+        vehicleProps["windows"] = {}
+        vehicleProps["doors"] = {}
+        for id = 1, 7 do
+            local tyreId = IsVehicleTyreBurst(vehicle, id, false)
+            if tyreId then
+                vehicleProps["tyres"][#vehicleProps["tyres"] + 1] = tyreId
+                if tyreId == false then
+                    tyreId = IsVehicleTyreBurst(vehicle, id, true)
+                    vehicleProps["tyres"][ #vehicleProps["tyres"]] = tyreId
+                end
+            else
+                vehicleProps["tyres"][#vehicleProps["tyres"] + 1] = false
+            end
+        end
+        for id = 1, 13 do
+            local windowId = IsVehicleWindowIntact(vehicle, id)
+            if windowId ~= nil then
+                vehicleProps["windows"][#vehicleProps["windows"] + 1] = windowId
+            else
+                vehicleProps["windows"][#vehicleProps["windows"] + 1] = true
+            end
+        end
+        for id = 0, 5 do
+            local doorId = IsVehicleDoorDamaged(vehicle, id)
+            if doorId then
+                vehicleProps["doors"][#vehicleProps["doors"] + 1] = doorId
+            else
+                vehicleProps["doors"][#vehicleProps["doors"] + 1] = false
+            end
+        end
+        vehicleProps["engineHealth"] = GetVehicleEngineHealth(vehicle)
+        vehicleProps["bodyHealth"] = GetVehicleBodyHealth(vehicle)
+        vehicleProps["fuelLevel"] = GetVehicleFuelLevel(vehicle)
+        vehicleProps["vehicleType"] = GetVehicleClass(vehicle)
+
+        return vehicleProps
+    end
 end
